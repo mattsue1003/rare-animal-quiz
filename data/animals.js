@@ -444,7 +444,7 @@ window.ANIMALS = [
   voice:"白鼻心警戒時會發出尖細的叫聲。這段是在台東山區錄到的真實聲音。"
 },
 {
-  key:"sambar", name:"臺灣水鹿", formal:"臺灣水鹿", en:"Formosan Sambar", sci:"Rusa unicolor swinhoii", alias:"台灣特有亞種",
+  key:"sambar", name:"臺灣水鹿", formal:"臺灣水鹿", en:"Formosan Sambar", sci:"Rusa unicolor swinhoii", alias:"",
   region:["tw","asia"], iucn:"VU", tw:"台灣特有亞種",
   where:"亞洲｜台灣中高海拔山區，例如玉山、雪山、南湖大山的草原和森林。",
   hints:{
