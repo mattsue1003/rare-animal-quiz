@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>猜猜看 少見動物</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="20 種少見動物猜謎：一步一步給提示，揭曉後看知識卡、聽真實叫聲、看影片。給長輩和小朋友的團體帶領活動。">
+<meta name="description" content="40 種少見動物猜謎：一步一步給提示，揭曉後看知識卡、聽真實叫聲、看影片。給長輩和小朋友的團體帶領活動。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+TC:wght@500;700;900&display=swap">
@@ -211,13 +211,13 @@ ol.steps{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px;
   <div class="poster">
     <div class="wrap">
       <div class="hero">
-        <div class="vlabel">少見動物 <b>20</b> 種・台灣與世界</div>
+        <div class="vlabel">少見動物 <b>40</b> 種・台灣與世界</div>
         <div>
           <h1><span class="k cjk-mega">猜猜看，我是誰？</span><span class="e mega">Rare Animals<br>Guess Who</span></h1>
           <p class="lead">看照片，一個一個打開提示，大家一起猜這隻少見動物。猜到後看知識卡、聽真實叫聲、看影片。</p>
           <div class="hero-cta">
             <button class="btn" data-go="start"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>開始猜動物</button>
-            <button class="btn ghost" data-go="gallery">看 20 種動物</button>
+            <button class="btn ghost" data-go="gallery">看 40 種動物</button>
           </div>
         </div>
         <div class="frame"><img src="assets/img/redpanda.jpg" alt="小貓熊趴在樹枝上"></div>
@@ -237,7 +237,7 @@ ol.steps{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px;
       </div>
       <div class="box g"><h3>玩哪些動物</h3>
         <div class="seg" id="regionSeg">
-          <button class="chip" data-v="all">全部</button><button class="chip" data-v="tw">台灣</button><button class="chip" data-v="asia">亞洲</button><button class="chip" data-v="africa">非洲</button><button class="chip" data-v="america">美洲</button><button class="chip" data-v="oceania">大洋洲</button>
+          <button class="chip" data-v="all">全部</button><button class="chip" data-v="tw">台灣</button><button class="chip" data-v="asia">亞洲</button><button class="chip" data-v="africa">非洲</button><button class="chip" data-v="america">美洲</button><button class="chip" data-v="oceania">大洋洲</button><button class="chip" data-v="sea">海洋</button>
         </div>
       </div>
       <div class="box"><h3>題目順序</h3>
@@ -246,11 +246,11 @@ ol.steps{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px;
           <button class="chip" data-v="rand">隨機抽 8 隻</button>
           <button class="chip" data-v="randall">全部打亂</button>
         </div>
-        <p class="credit">一堂課玩 6–8 隻剛好，留時間聊天。</p>
+        <p class="credit">一堂課玩 6–8 隻剛好，留時間聊天；40 種可以分好幾堂課玩。</p>
       </div>
     </div>
     <div class="home-links">
-      <button class="tile" data-go="gallery"><b>動物圖鑑</b><span>20 種動物一覽，點一隻直接從牠開始。</span></button>
+      <button class="tile" data-go="gallery"><b>動物圖鑑</b><span>40 種動物一覽，點一隻直接從牠開始。</span></button>
       <button class="tile" data-go="sounds"><b>動物叫聲資料庫</b><span>哪裡可以聽到動物的真實聲音？</span></button>
       <button class="tile" data-go="guide"><b>帶領說明</b><span>怎麼帶、帶領小撇步、照片來源。</span></button>
     </div>
@@ -307,10 +307,10 @@ ol.steps{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px;
     <button class="btn small orange" data-go="start">開始猜</button>
   </div></div>
   <div class="wrap" style="padding-block:26px 10px">
-    <h2 class="page-title"><span class="e">20 Rare Animals</span>少見動物圖鑑</h2>
+    <h2 class="page-title"><span class="e">40 Rare Animals</span>少見動物圖鑑</h2>
     <p class="qsub">點一隻動物，就從牠開始猜。圓圈裡是 IUCN 紅色名錄等級（CR 極危、EN 瀕危、VU 易危、NT 近危、LC 無危）。</p>
     <div class="seg" id="gFilter">
-      <button class="chip" data-v="all">全部</button><button class="chip" data-v="tw">台灣</button><button class="chip" data-v="asia">亞洲</button><button class="chip" data-v="africa">非洲</button><button class="chip" data-v="america">美洲</button><button class="chip" data-v="oceania">大洋洲</button><button class="chip" data-v="snd">有真實叫聲</button>
+      <button class="chip" data-v="all">全部</button><button class="chip" data-v="tw">台灣</button><button class="chip" data-v="asia">亞洲</button><button class="chip" data-v="africa">非洲</button><button class="chip" data-v="america">美洲</button><button class="chip" data-v="oceania">大洋洲</button><button class="chip" data-v="sea">海洋</button><button class="chip" data-v="snd">有真實叫聲</button>
     </div>
     <div class="ggrid" id="gGrid"></div>
     <div class="sign"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 005.66 0l3-3a4 4 0 00-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 00-5.66 0l-3 3a4 4 0 005.66 5.66l1-1"/></svg></span><span>設計者｜愛迪樂　<b>鍾孟修 職能治療師</b></span></div>
@@ -327,7 +327,7 @@ ol.steps{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px;
   <div class="wrap" style="padding-block:26px 10px">
     <h2 class="page-title"><span class="e">Animal Sound Archives</span>有沒有動物叫聲資料庫？</h2>
     <div class="box" style="margin-top:16px">
-      <p class="answer-box"><b>有，而且有好幾個可以免費聽。</b>鳥類最齊全的是 <b>xeno-canto</b>，現在也收青蛙、蝗蟲、蝙蝠和陸地哺乳動物；最大、最專業的是康乃爾大學的 <b>麥考利圖書館</b>；德國柏林自然史博物館的 <b>Tierstimmenarchiv</b> 有很多哺乳動物的老錄音；<b>BBC 音效庫</b> 和 <b>維基共享資源</b> 也找得到一些。不過很多少見動物本來就很少叫（例如穿山甲、美西螈），所以不是每一種都有錄音。本網頁 20 種動物裡，有 7 種放了可以直接播放的真實錄音；沒有錄音的，我們就照實說明牠會發出什麼聲音，並附上搜尋連結。</p>
+      <p class="answer-box"><b>有，而且有好幾個可以免費聽。</b>鳥類最齊全的是 <b>xeno-canto</b>，現在也收青蛙、蝗蟲、蝙蝠和陸地哺乳動物；最大、最專業的是康乃爾大學的 <b>麥考利圖書館</b>；德國柏林自然史博物館的 <b>Tierstimmenarchiv</b> 有很多哺乳動物的老錄音；<b>BBC 音效庫</b> 和 <b>維基共享資源</b> 也找得到一些。不過很多少見動物本來就很少叫（例如穿山甲、美西螈），所以不是每一種都有錄音。本網頁 40 種動物裡，有 14 種放了可以直接播放的真實錄音（其中水鹿、長鬃山羊、黃喉貂、白鼻心是在台灣山區錄的）；沒有錄音的，我們就照實說明牠會發出什麼聲音，並附上搜尋連結。</p>
     </div>
     <div class="db">
       <div class="box"><h3>xeno-canto</h3><p>荷蘭基金會經營，全世界的人上傳野外錄音，每一筆都有錄音者、地點和 CC 授權。以鳥為主，也有蛙、蝗蟲、蝙蝠和陸地哺乳動物。標註來源、非商業使用即可放在教學網頁。</p><a class="chip" href="https://xeno-canto.org/" target="_blank" rel="noopener">xeno-canto ↗</a></div>
@@ -338,7 +338,7 @@ ol.steps{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px;
       <div class="box g"><h3>YouTube 影片</h3><p>沒有開放錄音的動物，常常可以在動物園或保育單位拍的影片裡聽到聲音，例如台北動物園拍的馬來貘叫聲。本頁揭曉答案後，有些動物會附上「聽聲音」的影片。</p></div>
     </div>
     <div class="box" style="margin-top:18px">
-      <h3>本網頁 20 種動物的聲音</h3>
+      <h3>本網頁 40 種動物的聲音</h3>
       <p class="credit" style="margin:0 0 10px">標示 ND（禁止改作）的錄音保持原檔未修改；其他錄音只調整音量或轉成 mp3。</p>
       <div class="tbl"><table class="cr" id="sndTable"></table></div>
     </div>
@@ -398,7 +398,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",
 const store={get(k,d){try{const v=localStorage.getItem("rareq_"+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem("rareq_"+k,JSON.stringify(v))}catch(e){}}};
 const host=location.hostname;
 const CAN_EMBED=/github\.io$/.test(host)||host==="localhost"||host==="127.0.0.1";
-const REGION={tw:"台灣",asia:"亞洲",africa:"非洲",america:"美洲",oceania:"大洋洲"};
+const REGION={tw:"台灣",asia:"亞洲",africa:"非洲",america:"美洲",oceania:"大洋洲",sea:"海洋"};
 const IUCN={CR:"極危",EN:"瀕危",VU:"易危",NT:"近危",LC:"無危"};
 const HINTS=[{k:"place",t:"住哪裡"},{k:"size",t:"多大"},{k:"look",t:"長相"},{k:"food",t:"吃什麼"},{k:"wow",t:"驚人的事"},{k:"name",t:"名字提示"},{k:"choice",t:"給三個選項"}];
 const EXT='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>';
@@ -531,7 +531,7 @@ function showAnswer(){
         <a class="chip" href="https://zh.wikipedia.org/w/index.php?variant=zh-tw&search=${encodeURIComponent(a.sci.split("（")[0])}" target="_blank" rel="noopener">${EXT}維基百科</a>
       </div>
       <div class="vids">${m.yt.map(vidHTML).join("")}</div>
-      <p class="credit">照片：${esc(m.img.author)}，${lic}，<a href="${m.img.page}" target="_blank" rel="noopener">Wikimedia Commons</a></p>
+      <p class="credit">照片：${esc(m.img.author)}，${lic}，<a href="${m.img.page}" target="_blank" rel="noopener">Wikimedia Commons</a>${m.img.note?"。"+esc(m.img.note):""}</p>
     </div>
     <div class="ans-nav"><button class="btn ghost" id="aBack2">回到提示</button><button class="btn orange" id="aNext2">${st.pos<st.list.length-1?"下一隻動物":"看圖鑑"}</button></div>
     <div class="sign"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 005.66 0l3-3a4 4 0 00-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 00-5.66 0l-3 3a4 4 0 005.66 5.66l1-1"/></svg></span><span>設計者｜愛迪樂　<b>鍾孟修 職能治療師</b></span></div>

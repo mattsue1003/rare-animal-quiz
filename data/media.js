@@ -1,4 +1,4 @@
-// 圖片、聲音、影片來源（44 支影片皆以 oEmbed＋watch 頁 playableInEmbed 驗證，2026-11-17）
+// 圖片、聲音、影片來源（影片皆以 oEmbed＋實際在 github.io 內嵌播放驗證）
 window.MEDIA={
  "pangolin": {
   "img": {
@@ -49,9 +49,9 @@ window.MEDIA={
   },
   "yt": [
    {
-    "id": "J62a1tnevGo",
-    "title": "保護「獺」們！在台歐亞水獺僅剩金門見得到【發現科學】",
-    "ch": "台視新聞 TTV NEWS"
+    "id": "QYlz_lMMyqU",
+    "title": "【世界翻轉中】守護水獺! 全台僅存150隻最後棲地在金門｜TVBS新聞 @TVBSNEWS01",
+    "ch": "TVBS NEWS"
    },
    {
     "id": "9e-GHU_XzIE",
@@ -485,6 +485,482 @@ window.MEDIA={
     "id": "Foy13sAljgY",
     "title": "儒艮X東帝汶 Dugong in Timor-Leste",
     "ch": "鯨嘆號 Cetacea & Nature"
+   }
+  ]
+ },
+ "civet": {
+  "img": {
+   "author": "Denise Chan from Hong Kong, China",
+   "lic": "CC BY-SA 2.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Palm_civet_on_tree_(detail).jpg"
+  },
+  "yt": [
+   {
+    "id": "TqfgsH22T20",
+    "title": "白鼻心適應都市環境 台大團隊設回報網尋蹤跡｜20231218 公視晚間新聞",
+    "ch": "公視新聞網"
+   },
+   {
+    "id": "BYXhS5L3VTQ",
+    "title": "陽明山國家公園生態廊道系列 動物的二三事【白鼻心】",
+    "ch": "陽明山國家公園管理處INFO"
+   }
+  ],
+  "snd": {
+   "src": "xc",
+   "id": "980175",
+   "rec": "Sheng-wun Jheng",
+   "lic": "CC BY-NC-SA 4.0",
+   "where": "台灣台東海端",
+   "type": "alarm call, call",
+   "cut": "音量調整"
+  },
+  "xcsp": "Paguma-larvata"
+ },
+ "sambar": {
+  "img": {
+   "author": "Charles J. Sharp",
+   "lic": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Sambar_(Cervus_unicolor_unicolor)_male.jpg",
+   "note": "照片是印度的水鹿（同一種、不同亞種）；台灣水鹿毛色較深、體型較小。"
+  },
+  "yt": [
+   {
+    "id": "HgaNoxwdzcc",
+    "title": "臺灣水鹿 │玉山國家公園│Yushan National Park",
+    "ch": "玉山國家公園管理處"
+   },
+   {
+    "id": "8ReRdCCN5Iw",
+    "title": "此生恐難再見！台灣高山目睹「水鹿大遷徙」超感動（@itsup.to.you 提供）",
+    "ch": "自由時報電子報"
+   }
+  ],
+  "snd": {
+   "src": "xc",
+   "id": "985967",
+   "rec": "Sheng-wun Jheng",
+   "lic": "CC BY-NC-SA 4.0",
+   "where": "台灣花蓮卓溪",
+   "type": "call",
+   "cut": "音量調整"
+  },
+  "xcsp": "Rusa-unicolor"
+ },
+ "serow": {
+  "img": {
+   "author": "user:peellden",
+   "lic": "CC BY-SA 3.0",
+   "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "page": "https://commons.wikimedia.org/wiki/File:%E9%95%B7%E9%AC%83%E5%B1%B1%E7%BE%8A.jpg"
+  },
+  "yt": [
+   {
+    "id": "4y4IpT-O23o",
+    "title": "《台灣長鬃山羊》｜ #台灣特有種 2 ｜配音 #阿翰",
+    "ch": "小公視"
+   },
+   {
+    "id": "tQfV4kk_lb8",
+    "title": "加里山的山神獸！直擊台灣長鬃山羊山頂懸崖樹上理毛、睡覺萌樣",
+    "ch": "自由時報電子報"
+   }
+  ],
+  "snd": {
+   "src": "xc",
+   "id": "987144",
+   "rec": "Sheng-wun Jheng",
+   "lic": "CC BY-NC-SA 4.0",
+   "where": "台灣花蓮秀林",
+   "type": "alarm call, call",
+   "cut": "音量調整"
+  },
+  "xcsp": "Capricornis-swinhoei"
+ },
+ "marten": {
+  "img": {
+   "author": "Rushenb",
+   "lic": "CC BY 3.0",
+   "licurl": "https://creativecommons.org/licenses/by/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Martes_flavigula,_yellow-throated_marten.jpg"
+  },
+  "yt": [
+   {
+    "id": "7CaiUjaHhCs",
+    "title": "自然台灣-黃喉貂 Natural Taiwan- Martes flavigula",
+    "ch": "發現文化 馮振隆說生態故事"
+   },
+   {
+    "id": "SjTy9-VuQ6E",
+    "title": "【#預告 山中精靈黃喉貂｜中海拔山區最鮮明的身影】",
+    "ch": "公共電視-我們的島"
+   }
+  ],
+  "snd": {
+   "src": "xc",
+   "id": "980158",
+   "rec": "Sheng-wun Jheng",
+   "lic": "CC BY-NC-SA 4.0",
+   "where": "台灣花蓮卓溪",
+   "type": "alarm call, call",
+   "cut": "音量調整"
+  },
+  "xcsp": "Martes-flavigula"
+ },
+ "greenturtle": {
+  "img": {
+   "author": "Charles J. Sharp",
+   "lic": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg"
+  },
+  "yt": [
+   {
+    "id": "p2-jsU5CljQ",
+    "title": "小海龜是如何誕生？珍貴破殼畫面獨家曝光！前進望安島一起參與小海龜的奇幻一生！《大洋的召喚》番外篇_4K SDR｜舒夢蘭",
+    "ch": "聚焦全世界"
+   },
+   {
+    "id": "u-RxtAulBdI",
+    "title": "澎湖小綠蠵龜孵化 民眾深夜自發性護送！",
+    "ch": "快點TV"
+   }
+  ]
+ },
+ "flyingsquirrel": {
+  "img": {
+   "author": "Jay Paroline",
+   "lic": "CC BY 4.0",
+   "licurl": "https://creativecommons.org/licenses/by/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Petaurista_grandis.jpg"
+  },
+  "yt": [
+   {
+    "id": "3d3wiyuNz7I",
+    "title": "大赤鼯鼠滑行.mpg",
+    "ch": "Shuei-chuan Kuo"
+   },
+   {
+    "id": "1yUmBk9tDws",
+    "title": "大赤鼯鼠飛行篇",
+    "ch": "楊萬泰"
+   }
+  ]
+ },
+ "sunfish": {
+  "img": {
+   "author": "U.S. National Oceanic and Atmospheric Administration",
+   "lic": "公眾領域",
+   "licurl": "",
+   "page": "https://commons.wikimedia.org/wiki/File:Mola_mola.jpg"
+  },
+  "yt": [
+   {
+    "id": "CewHqQ6Eq0Q",
+    "title": "跟長相「浩呆浩呆」的翻車魚面對面《國家地理》雜誌",
+    "ch": "國家地理雜誌 National Geographic Magazine"
+   },
+   {
+    "id": "SE86jMggeu4",
+    "title": "真「翻車」...曼波魚關渡碼頭「擱淺」吸人潮圍觀｜TVBS新聞 @TVBSNEWS01",
+    "ch": "TVBS NEWS"
+   }
+  ]
+ },
+ "aardvark": {
+  "img": {
+   "author": "Kelly Abram",
+   "lic": "CC BY 4.0",
+   "licurl": "https://creativecommons.org/licenses/by/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Orycteropus_afer_175359469.jpg"
+  },
+  "yt": [
+   {
+    "id": "9CoU2A8bS0g",
+    "title": "「溫索」是一隻醜得可愛的土豚寶寶！《國家地理》雜誌",
+    "ch": "國家地理雜誌 National Geographic Magazine"
+   },
+   {
+    "id": "7bf-AIhVk3A",
+    "title": "Secret Creatures: Africa's earth pig, the Aardvark. #wildlife",
+    "ch": "Lion Mountain TV"
+   }
+  ]
+ },
+ "starmole": {
+  "img": {
+   "author": "US National Parks Service",
+   "lic": "公眾領域",
+   "licurl": "",
+   "page": "https://commons.wikimedia.org/wiki/File:Condylura.jpg"
+  },
+  "yt": [
+   {
+    "id": "u74iVC_wVek",
+    "title": "The Weird and Wonderful Star-Nosed Mole | 4K UHD | Mammals | BBC Earth",
+    "ch": "BBC Earth"
+   },
+   {
+    "id": "GxgYxUVQHoQ",
+    "title": "This star-nosed mole has SUPERPOWERS 👃 | Mammals - BBC",
+    "ch": "BBC"
+   }
+  ]
+ },
+ "armadillo": {
+  "img": {
+   "author": "Aramburu Carlos",
+   "lic": "CC BY 4.0",
+   "licurl": "https://creativecommons.org/licenses/by/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Dasypus_novemcinctus_en_Zool%C3%B3gico_de_Paraguan%C3%A1.jpg"
+  },
+  "yt": [
+   {
+    "id": "1rTmjsjPiRA",
+    "title": "Amazing Armadillo Looks for Love | 4K UHD | Mammals | BBC Earth",
+    "ch": "BBC Earth"
+   },
+   {
+    "id": "E5O9FKOPJdQ",
+    "title": "犰狳：長相可愛、個性溫馴，為什麼全美每年卻有上百人因牠感染麻風病？｜【動物科普】",
+    "ch": "深空的凝望"
+   }
+  ],
+  "snd": {
+   "src": "xc",
+   "id": "981612",
+   "rec": "Paul Marvin",
+   "lic": "CC BY-NC-SA 4.0",
+   "where": "美國佛羅里達",
+   "type": "call",
+   "cut": "音量調整"
+  },
+  "xcsp": "Dasypus-novemcinctus"
+ },
+ "loris": {
+  "img": {
+   "author": "David Haring / Duke Lemur Center",
+   "lic": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Nycticebus_coucang_004.jpg"
+  },
+  "yt": [
+   {
+    "id": "TKTQFM44xFs",
+    "title": "這20隻懶猴曾是珍奇寵物，如今得以重返自然《國家地理》雜誌",
+    "ch": "國家地理雜誌 National Geographic Magazine"
+   },
+   {
+    "id": "Z0Xm3797Swk",
+    "title": "小懶猴豐富化設施？是新生寶寶「麻荖」啦!",
+    "ch": "臺北市立動物園"
+   }
+  ]
+ },
+ "tarsier": {
+  "img": {
+   "author": "Charles J. Sharp",
+   "lic": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Philippine_tarsier_(Carlito_syrichta_fraterculus)_Bohol.jpg"
+  },
+  "yt": [
+   {
+    "id": "EPB02TIUIeE",
+    "title": "【菲律賓】薄荷島吉祥物大眼眼鏡猴「Tarsier Conservation Area」食尚玩家",
+    "ch": "食尚玩家"
+   },
+   {
+    "id": "00mRkFfJ_tQ",
+    "title": "【眼镜猴的世界①】The world of tarsiers",
+    "ch": "Jeffrey Wang"
+   }
+  ]
+ },
+ "fossa": {
+  "img": {
+   "author": "Ran Kirlian",
+   "lic": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Cryptoprocta_Ferox.JPG"
+  },
+  "yt": [
+   {
+    "id": "po5KXxF99Dc",
+    "title": "Chester Zoo FIRST: Rare Fossa Triplets Born",
+    "ch": "ZooBorns"
+   },
+   {
+    "id": "b86DU8w_2Ik",
+    "title": "Madagascar's Deadliest Hunter | The Fossa",
+    "ch": "Hidden Earth Wildlife "
+   }
+  ]
+ },
+ "manedwolf": {
+  "img": {
+   "author": "Jonathan Wilkins",
+   "lic": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lobo_Guar%C3%A1_andando.jpg"
+  },
+  "yt": [
+   {
+    "id": "dKJTABb1LlQ",
+    "title": "南美洲最大犬科長腿狼~鬃狼",
+    "ch": "QE-TH"
+   },
+   {
+    "id": "sdi1ISvngrg",
+    "title": "Maned wolf in Brazil",
+    "ch": "VagabondWay"
+   }
+  ],
+  "sndvid": {
+   "id": "8QMAWpuzGdE",
+   "title": "Maned Wolf Makes Some Noise - The Rare \"Roar-Bark\"",
+   "ch": "kyrgyzburg"
+  }
+ },
+ "devil": {
+  "img": {
+   "author": "JJ Harrison (https://www.jjharrison.com.au/)",
+   "lic": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Sarcophilus_harrisii_taranna.jpg"
+  },
+  "yt": [
+   {
+    "id": "_gergWMqwRs",
+    "title": "替凶巴巴的袋獾裝上攝影機項圈《國家地理》雜誌",
+    "ch": "國家地理雜誌 National Geographic Magazine"
+   },
+   {
+    "id": "GJutRIGvd7s",
+    "title": "塔斯馬尼亞惡魔(袋獾)",
+    "ch": "eriocatus"
+   }
+  ],
+  "snd": {
+   "src": "xc",
+   "id": "959802",
+   "rec": "Marc Anderson",
+   "lic": "CC BY-NC-ND 4.0",
+   "where": "澳洲塔斯馬尼亞",
+   "type": "call",
+   "cut": "原始檔未修改"
+  },
+  "xcsp": "Sarcophilus-harrisii"
+ },
+ "kakapo": {
+  "img": {
+   "author": "Department of Conservation",
+   "lic": "CC BY 2.0",
+   "licurl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kakapo_Sirocco_1.jpg"
+  },
+  "yt": [
+   {
+    "id": "E3a88_SjJR0",
+    "title": "Kakapo: Flightless Parrot | Benedict Cumberbatch | BBC Earth",
+    "ch": "BBC Earth"
+   },
+   {
+    "id": "w2zjoVyXFjM",
+    "title": "鴞鸚鵡 kakapo",
+    "ch": "QingFengAttic"
+   }
+  ],
+  "snd": {
+   "src": "xc",
+   "id": "295659",
+   "rec": "Johannes Fischer",
+   "lic": "CC BY-NC-SA 4.0",
+   "where": "紐西蘭史都華島",
+   "type": "alarm call",
+   "cut": "音量調整"
+  },
+  "xcsp": "Strigops-habroptila"
+ },
+ "babirusa": {
+  "img": {
+   "author": "Masteraah at German Wikipedia",
+   "lic": "CC BY-SA 2.0 de",
+   "licurl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File:Hirscheber1a.jpg"
+  },
+  "yt": [
+   {
+    "id": "cZxvskNfK4o",
+    "title": "長有怪異獠牙的鹿豚！《國家地理》雜誌",
+    "ch": "國家地理雜誌 National Geographic Magazine"
+   },
+   {
+    "id": "8UTPKCr3-yE",
+    "title": "既像鹿又像豬的「鹿豚」三胞胎！《國家地理》雜誌",
+    "ch": "國家地理雜誌 National Geographic Magazine"
+   }
+  ]
+ },
+ "saiga": {
+  "img": {
+   "author": "Andrey Giljov",
+   "lic": "CC BY-SA 4.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Saiga_antelope_at_the_Stepnoi_Sanctuary.jpg"
+  },
+  "yt": [
+   {
+    "id": "4TT4AoSiS_Q",
+    "title": "Adorable baby saiga takes first steps in Kazakhstan",
+    "ch": "Fauna & Flora"
+   },
+   {
+    "id": "Z1hHcLD-wj4",
+    "title": "Close-up Of Male Saiga Antelope In Uzbekistan",
+    "ch": "PTESwildlifevideos"
+   }
+  ]
+ },
+ "iguana": {
+  "img": {
+   "author": "RAF-YYC from Calgary, Canada",
+   "lic": "CC BY-SA 2.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Amblyrhynchus_cristatus_(3838137696).jpg"
+  },
+  "yt": [
+   {
+    "id": "V4LeXGijCYM",
+    "title": "吃素的海中蛟龍：海鬣蜥《國家地理》雜誌",
+    "ch": "國家地理雜誌 National Geographic Magazine"
+   },
+   {
+    "id": "2WZlEnorJyE",
+    "title": "Marine Iguana 海鬣蜥 - 1",
+    "ch": "Jeffrey Liu"
+   }
+  ]
+ },
+ "pygmyhippo": {
+  "img": {
+   "author": "Bardrock",
+   "lic": "CC BY-SA 3.0",
+   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Hexaprotodon_liberiensis_in_Edinburgh_Zoo.JPG"
+  },
+  "yt": [
+   {
+    "id": "XBh2TEyYrLk",
+    "title": "泰國侏儒河馬「彈跳豬」爆紅 業者推蛋糕、玩具周邊商機熱｜20241003 公視新聞全球話",
+    "ch": "公視新聞網"
+   },
+   {
+    "id": "V_QyuxYezRU",
+    "title": "泰國侏儒河馬爆紅　「彈跳豬」成動物園人氣王｜華視新聞 20240917@CtsTw",
+    "ch": "華視新聞 CH52"
    }
   ]
  }
