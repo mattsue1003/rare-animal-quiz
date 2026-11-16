@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>猜猜看 少見動物</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="20 種少見動物猜謎：一步一步給提示，揭曉後看知識卡、聽真實叫聲、看影片。給長輩和小朋友的團體帶領活動。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+TC:wght@500;700;900&display=swap">
+<style>
+/* 版面概念：World Animal Day 海報——橘色上半與深森林綠下半沿斜線交會，大照片跨過色塊分界，白色窄體大標；其他內容放在米白紙面上的白卡，字大、對比高。只做淺色。 */
+:root{
+  --orange:#EE5A1F; --orange-d:#C7430E; --green:#0F5A34; --green-d:#0A4226;
+  --paper:#FFF6EC; --card:#FFFFFF; --ink:#1A1915; --muted:#5A544B; --line:#EADCCB; --black:#121212;
+  --display:"Anton","Noto Sans TC","PingFang TC","Microsoft JhengHei",Impact,sans-serif;
+  --cjk-display:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --split:linear-gradient(166deg,var(--orange) 0 47%,var(--green) 47% 100%);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-weight:500;font-size:20px;line-height:1.65;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:var(--green)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:4px solid var(--black);outline-offset:3px}
+.view{display:none}
+.view.on{display:block}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{text-wrap:balance;margin:0}
+
+/* 按鈕 */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 26px;border:0;border-radius:999px;background:var(--black);color:#fff;font-weight:900;font-size:21px;letter-spacing:.04em;text-decoration:none}
+.btn:hover{background:#000;transform:translateY(-1px)}
+.btn.orange{background:var(--orange-d)}
+.btn.green{background:var(--green)}
+.btn.ghost{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 3px var(--ink)}
+.btn.small{min-height:46px;padding:0 18px;font-size:18px}
+.btn svg{width:24px;height:24px;flex:none}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;border-radius:999px;background:#fff;color:var(--ink);border:2px solid var(--ink);font-weight:700;font-size:17px;text-decoration:none}
+.chip:hover{background:var(--ink);color:#fff}
+.chip.on{background:var(--ink);color:#fff}
+
+/* 上方工具列 */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--black);color:#fff}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--black)}
+.bar .wrap{display:flex;align-items:center;gap:10px;min-height:64px;padding-block:8px;flex-wrap:wrap}
+.brand{background:none;border:0;color:#fff;font-family:var(--cjk-display);font-weight:900;font-size:22px;padding:0;display:flex;align-items:baseline;gap:8px}
+.brand small{font-family:var(--display);font-weight:400;font-size:16px;letter-spacing:.08em;color:#FFB48F}
+.sp{flex:1}
+.pill{font-weight:900;font-size:18px;background:var(--orange);color:#fff;border-radius:999px;padding:4px 14px;font-variant-numeric:tabular-nums}
+.icon-btn{display:inline-flex;align-items:center;gap:6px;min-height:46px;padding:0 14px;border-radius:999px;border:2px solid #fff;background:transparent;color:#fff;font-weight:700;font-size:17px}
+.icon-btn:hover{background:#fff;color:var(--black)}
+.icon-btn svg{width:20px;height:20px}
+
+/* 海報區塊 */
+.poster{background:var(--split);color:#fff;position:relative;overflow:hidden}
+.poster .wrap{position:relative;padding-block:34px 40px}
+.vlabel{writing-mode:vertical-rl;font-family:var(--cjk-display);font-weight:900;font-size:18px;letter-spacing:.25em;color:#fff;opacity:.95}
+.vlabel b{font-family:var(--display);font-weight:400;letter-spacing:.1em;color:#FFE1CF}
+.mega{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:.01em}
+.cjk-mega{font-family:var(--cjk-display);font-weight:900;line-height:1.05;letter-spacing:.02em}
+.frame{background:#fff;padding:10px;border-radius:6px;box-shadow:0 18px 40px rgba(0,0,0,.28)}
+.frame img{width:100%;height:100%;object-fit:cover;border-radius:2px}
+
+/* 首頁 */
+.hero{display:grid;grid-template-columns:auto minmax(0,1.05fr) minmax(0,1fr);gap:22px 30px;align-items:center}
+.hero h1 .k{display:block;font-size:clamp(46px,7.6vw,96px)}
+.hero h1 .e{display:block;font-size:clamp(40px,6.4vw,84px);margin-top:10px}
+.hero p.lead{font-size:21px;font-weight:700;max-width:30em;margin:18px 0 0}
+.hero .frame{transform:rotate(-2.5deg);aspect-ratio:4/3;max-width:100%}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.setup{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.box{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:20px 22px;min-width:0}
+.box h3{font-family:var(--cjk-display);font-weight:900;font-size:22px;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.box h3::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--orange);flex:none}
+.box.g h3::before{background:var(--green)}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.home-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:22px 0 10px}
+.tile{display:flex;flex-direction:column;gap:6px;text-align:left;border:0;border-radius:14px;padding:20px 22px;color:#fff;background:var(--green);min-height:120px}
+.tile:nth-child(2){background:var(--orange-d)}
+.tile:nth-child(3){background:var(--black)}
+.tile b{font-family:var(--cjk-display);font-weight:900;font-size:24px}
+.tile span{font-size:17px;opacity:.95}
+.tile:hover{filter:brightness(1.08)}
+
+/* 落款：黑色圓形圖示＋小字 */
+.sign{display:flex;align-items:center;gap:14px;margin:26px 0 34px;font-size:17px;color:var(--ink)}
+.sign .dot{width:52px;height:52px;border-radius:50%;background:var(--black);display:grid;place-items:center;flex:none}
+.sign .dot svg{width:26px;height:26px;color:#fff}
+.sign b{font-weight:900}
+.poster .sign{color:#fff;margin:22px 0 0}
+
+/* 猜題 */
+.stage{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px;align-items:start;padding-block:22px 10px}
+.qpanel{background:var(--split);border-radius:18px;padding:22px 22px 26px;color:#fff;position:relative;min-width:0}
+.qpanel .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}
+.qpanel .num{font-family:var(--display);font-size:64px;line-height:.9}
+.qpanel .num small{font-size:26px;opacity:.85}
+.qpanel .ask{font-family:var(--cjk-display);font-weight:900;font-size:clamp(28px,3.4vw,40px);line-height:1.15;text-align:right}
+.photo{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:4px;background:#ddd}
+.photo img{width:100%;height:100%;object-fit:cover;transition:filter .6s ease,transform .7s ease}
+.qpanel .frame{transform:rotate(-1.5deg)}
+.qcard{background:var(--card);border:3px solid var(--ink);border-radius:18px;padding:22px;min-width:0}
+.qcard h2{font-family:var(--cjk-display);font-weight:900;font-size:28px}
+.qsub{color:var(--muted);margin:6px 0 14px;font-size:18px}
+.hint-btns{display:flex;flex-wrap:wrap;gap:10px}
+.hb{display:inline-flex;align-items:center;gap:8px;min-height:54px;padding:0 18px;border-radius:999px;border:0;background:var(--orange-d);color:#fff;font-weight:900;font-size:19px}
+.hb:nth-child(even){background:var(--green)}
+.hb.used{background:#E7DED3;color:#7A7166}
+.hb i{font-style:normal;font-family:var(--display);font-size:18px;background:rgba(255,255,255,.22);border-radius:50%;width:28px;height:28px;display:grid;place-items:center}
+.hints{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:10px}
+.hints li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;background:var(--paper);border-radius:12px;padding:12px 16px;font-size:22px;font-weight:700;animation:pop .35s ease}
+.hints li .tag{font-size:16px;font-weight:900;color:#fff;background:var(--ink);border-radius:8px;padding:3px 10px;margin-top:4px;white-space:nowrap}
+.choices{display:flex;flex-wrap:wrap;gap:10px}
+.choices button{min-height:54px;padding:0 22px;border-radius:12px;border:3px solid var(--ink);background:#fff;font-weight:900;font-size:22px}
+.choices button.no{opacity:.45;text-decoration:line-through}
+.choices button.yes{background:var(--green);color:#fff;border-color:var(--green)}
+.empty-tip{color:var(--muted);font-size:17px;margin:14px 0 0}
+.kbd{display:inline-block;border:2px solid var(--muted);border-radius:6px;padding:0 6px;font-size:14px;line-height:1.5}
+.reveal-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+@keyframes pop{from{transform:translateY(6px);opacity:.3}to{transform:none;opacity:1}}
+
+/* 揭曉 */
+.ans-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center}
+.ans-hero .frame{transform:rotate(2deg)}
+.ans-name .pre{font-weight:900;font-size:20px;background:var(--black);display:inline-block;padding:4px 14px;border-radius:999px}
+.ans-name .zh{display:block;font-family:var(--cjk-display);font-weight:900;font-size:clamp(56px,8vw,110px);line-height:1.02;margin-top:12px}
+.ans-name .en{display:block;font-family:var(--display);text-transform:uppercase;font-size:clamp(30px,4vw,52px);line-height:1;margin-top:6px}
+.ans-name .sci{display:block;font-style:italic;font-size:20px;margin-top:8px;opacity:.95}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:17px;font-weight:900;background:#fff;color:var(--ink);border-radius:999px;padding:5px 14px}
+.iucn{display:inline-grid;place-items:center;font-family:var(--display);font-size:16px;width:34px;height:34px;border-radius:50%;color:#fff;margin:-3px 0 -3px -8px}
+.iucn.CR{background:#D81E05}.iucn.EN{background:#E8641E}.iucn.VU{background:#E5C300;color:#1A1915}.iucn.NT{background:#9DB51E}.iucn.LC{background:#3E9B3C}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
+.facts{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px}
+.talk{display:flex;flex-direction:column;gap:10px}
+.talk div{background:var(--paper);border-radius:10px;padding:10px 14px;font-weight:700}
+.talk .kidq{background:#FFE6D8}
+.player{display:flex;align-items:center;gap:14px;margin:6px 0 10px}
+.pp{width:64px;height:64px;border-radius:50%;border:0;background:var(--orange-d);color:#fff;display:grid;place-items:center;flex:none}
+.pp svg{width:30px;height:30px}
+.track{flex:1;height:14px;border-radius:7px;background:var(--line);cursor:pointer;overflow:hidden;min-width:0}
+.track i{display:block;height:100%;width:0;background:var(--green)}
+.tm{font-variant-numeric:tabular-nums;font-weight:700;font-size:18px}
+.silent{background:var(--paper);border-left:6px solid var(--green);border-radius:8px;padding:12px 16px;font-weight:700}
+.credit{font-size:15px;color:var(--muted);margin:8px 0 0;line-height:1.55}
+.linkrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.vids{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.vid{display:block;text-decoration:none;color:var(--ink);min-width:0}
+.vid .th{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:var(--black);cursor:pointer}
+.vid .th img{width:100%;height:100%;object-fit:cover;opacity:.92}
+.vid .th iframe{width:100%;height:100%;border:0}
+.vid .pl{position:absolute;inset:0;margin:auto;width:72px;height:72px;border-radius:50%;background:var(--orange-d);color:#fff;display:grid;place-items:center}
+.vid .pl svg{width:34px;height:34px}
+.vid .cap{display:flex;flex-direction:column;gap:2px;margin-top:8px;font-size:16px;line-height:1.45}
+.vid .cap span{color:var(--muted);font-size:15px}
+.ans-nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:24px 0 10px}
+
+/* 圖鑑 */
+.page-title{font-family:var(--cjk-display);font-weight:900;font-size:clamp(34px,5vw,56px);line-height:1.1}
+.page-title .e{display:block;font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:.62em;color:var(--orange-d);letter-spacing:.02em}
+.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:18px}
+.gitem{display:flex;flex-direction:column;text-align:left;border:0;padding:0;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 0 0 2px var(--line)}
+.gitem:hover{box-shadow:0 0 0 3px var(--ink)}
+.gitem img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.gitem .t{padding:10px 14px 14px;display:flex;flex-direction:column;gap:2px}
+.gitem b{font-family:var(--cjk-display);font-weight:900;font-size:22px}
+.gitem span{font-size:15px;color:var(--muted)}
+.gitem .row{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:4px}
+.gitem .row .iucn{width:28px;height:28px;font-size:13px;margin:0}
+.mini{font-size:13px;font-weight:900;border-radius:6px;padding:1px 8px;background:var(--paper);color:var(--ink)}
+.mini.done{background:var(--green);color:#fff}
+.db{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
+.db .box p{margin:0 0 10px;font-size:18px}
+.answer-box{font-size:21px;margin:0}
+table.cr{border-collapse:collapse;width:100%;font-size:16px;min-width:640px}
+table.cr th,table.cr td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+table.cr th{background:var(--paper);font-weight:900}
+.tbl{overflow-x:auto}
+ol.steps{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px;font-size:19px}
+.hide-s{}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:auto minmax(0,1fr)}
+  .hero .frame{grid-column:1/-1;max-width:560px}
+  .setup,.home-links{grid-template-columns:minmax(0,1fr)}
+  .stage,.ans-hero,.grid2,.db{grid-template-columns:minmax(0,1fr)}
+  .vids{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:19px}
+  .hide-s{display:none}
+  .hero .vlabel{display:none}
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .qpanel .num{font-size:48px}
+  .hints li{font-size:20px}
+  .bar .wrap{gap:6px}
+  .brand{font-size:19px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- 首頁 -->
+<section class="view on" id="home">
+  <div class="poster">
+    <div class="wrap">
+      <div class="hero">
+        <div class="vlabel">少見動物 <b>20</b> 種・台灣與世界</div>
+        <div>
+          <h1><span class="k cjk-mega">猜猜看，我是誰？</span><span class="e mega">Rare Animals<br>Guess Who</span></h1>
+          <p class="lead">看照片，一個一個打開提示，大家一起猜這隻少見動物。猜到後看知識卡、聽真實叫聲、看影片。</p>
+          <div class="hero-cta">
+            <button class="btn" data-go="start"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>開始猜動物</button>
+            <button class="btn ghost" data-go="gallery">看 20 種動物</button>
+          </div>
+        </div>
+        <div class="frame"><img src="assets/img/redpanda.jpg" alt="小貓熊趴在樹枝上"></div>
+      </div>
+      <div class="sign"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 005.66 0l3-3a4 4 0 00-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 00-5.66 0l-3 3a4 4 0 005.66 5.66l1-1"/></svg></span><span>設計者｜愛迪樂　<b>鍾孟修 職能治療師</b></span></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="setup">
+      <div class="box"><h3>怎麼看照片</h3>
+        <div class="seg" id="modeSeg">
+          <button class="chip" data-v="photo">看清楚照片</button>
+          <button class="chip" data-v="blur">模糊照片</button>
+          <button class="chip" data-v="zoom">局部放大</button>
+        </div>
+        <p class="credit">「模糊」和「局部放大」每打開一個提示，照片就清楚一點、看到多一點。</p>
+      </div>
+      <div class="box g"><h3>玩哪些動物</h3>
+        <div class="seg" id="regionSeg">
+          <button class="chip" data-v="all">全部</button><button class="chip" data-v="tw">台灣</button><button class="chip" data-v="asia">亞洲</button><button class="chip" data-v="africa">非洲</button><button class="chip" data-v="america">美洲</button><button class="chip" data-v="oceania">大洋洲</button>
+        </div>
+      </div>
+      <div class="box"><h3>題目順序</h3>
+        <div class="seg" id="orderSeg">
+          <button class="chip" data-v="list">照順序</button>
+          <button class="chip" data-v="rand">隨機抽 8 隻</button>
+          <button class="chip" data-v="randall">全部打亂</button>
+        </div>
+        <p class="credit">一堂課玩 6–8 隻剛好，留時間聊天。</p>
+      </div>
+    </div>
+    <div class="home-links">
+      <button class="tile" data-go="gallery"><b>動物圖鑑</b><span>20 種動物一覽，點一隻直接從牠開始。</span></button>
+      <button class="tile" data-go="sounds"><b>動物叫聲資料庫</b><span>哪裡可以聽到動物的真實聲音？</span></button>
+      <button class="tile" data-go="guide"><b>帶領說明</b><span>怎麼帶、帶領小撇步、照片來源。</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- 猜題 -->
+<section class="view" id="quiz">
+  <div class="bar"><div class="wrap">
+    <button class="brand" data-go="home" aria-label="回首頁">猜猜看 <small>RARE ANIMALS</small></button>
+    <span class="sp"></span>
+    <span class="pill" id="qProg">1 / 20</span>
+    <button class="icon-btn" id="qPrev" aria-label="上一隻"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg><span class="hide-s">上一隻</span></button>
+    <button class="icon-btn" id="qNext" aria-label="下一隻"><span class="hide-s">下一隻</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
+    <button class="icon-btn" data-go="gallery">圖鑑</button>
+  </div></div>
+  <div class="wrap">
+    <div class="stage">
+      <div class="qpanel">
+        <div class="top"><div class="num" id="qNum">1<small>/20</small></div><div class="ask">猜猜看<br>我是誰？</div></div>
+        <div class="frame"><div class="photo"><img id="qImg" alt="猜猜這是什麼動物"></div></div>
+      </div>
+      <div class="qcard">
+        <h2>一次打開一個提示</h2>
+        <p class="qsub">先讓大家說說看：牠長什麼樣子？像哪一種你認識的動物？</p>
+        <div class="hint-btns" id="hintBtns"></div>
+        <ul class="hints" id="hintList"></ul>
+        <p class="empty-tip" id="emptyTip">鍵盤：<span class="kbd">空白鍵</span> 下一個提示　<span class="kbd">Enter</span> 揭曉　<span class="kbd">→</span> 下一隻</p>
+        <div class="reveal-row">
+          <button class="btn" id="revealBtn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.7 7.6 1 12c1.7 4.4 6 7.5 11 7.5s9.3-3.1 11-7.5c-1.7-4.4-6-7.5-11-7.5zm0 12.5a5 5 0 110-10 5 5 0 010 10zm0-8a3 3 0 100 6 3 3 0 000-6z"/></svg>揭曉答案</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 揭曉 -->
+<section class="view" id="answer">
+  <div class="bar"><div class="wrap">
+    <button class="brand" data-go="home" aria-label="回首頁">猜猜看 <small>RARE ANIMALS</small></button>
+    <span class="sp"></span>
+    <span class="pill" id="aProg">1 / 20</span>
+    <button class="icon-btn" id="aBack"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg><span class="hide-s">回到提示</span></button>
+    <button class="icon-btn" id="aNext"><span>下一隻</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div></div>
+  <div id="ansBody"></div>
+</section>
+
+<!-- 圖鑑 -->
+<section class="view" id="gallery">
+  <div class="bar"><div class="wrap">
+    <button class="brand" data-go="home" aria-label="回首頁">猜猜看 <small>RARE ANIMALS</small></button>
+    <span class="sp"></span>
+    <button class="btn small orange" data-go="start">開始猜</button>
+  </div></div>
+  <div class="wrap" style="padding-block:26px 10px">
+    <h2 class="page-title"><span class="e">20 Rare Animals</span>少見動物圖鑑</h2>
+    <p class="qsub">點一隻動物，就從牠開始猜。圓圈裡是 IUCN 紅色名錄等級（CR 極危、EN 瀕危、VU 易危、NT 近危、LC 無危）。</p>
+    <div class="seg" id="gFilter">
+      <button class="chip" data-v="all">全部</button><button class="chip" data-v="tw">台灣</button><button class="chip" data-v="asia">亞洲</button><button class="chip" data-v="africa">非洲</button><button class="chip" data-v="america">美洲</button><button class="chip" data-v="oceania">大洋洲</button><button class="chip" data-v="snd">有真實叫聲</button>
+    </div>
+    <div class="ggrid" id="gGrid"></div>
+    <div class="sign"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 005.66 0l3-3a4 4 0 00-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 00-5.66 0l-3 3a4 4 0 005.66 5.66l1-1"/></svg></span><span>設計者｜愛迪樂　<b>鍾孟修 職能治療師</b></span></div>
+  </div>
+</section>
+
+<!-- 動物叫聲資料庫 -->
+<section class="view" id="sounds">
+  <div class="bar"><div class="wrap">
+    <button class="brand" data-go="home" aria-label="回首頁">猜猜看 <small>RARE ANIMALS</small></button>
+    <span class="sp"></span>
+    <button class="btn small orange" data-go="start">開始猜</button>
+  </div></div>
+  <div class="wrap" style="padding-block:26px 10px">
+    <h2 class="page-title"><span class="e">Animal Sound Archives</span>有沒有動物叫聲資料庫？</h2>
+    <div class="box" style="margin-top:16px">
+      <p class="answer-box"><b>有，而且有好幾個可以免費聽。</b>鳥類最齊全的是 <b>xeno-canto</b>，現在也收青蛙、蝗蟲、蝙蝠和陸地哺乳動物；最大、最專業的是康乃爾大學的 <b>麥考利圖書館</b>；德國柏林自然史博物館的 <b>Tierstimmenarchiv</b> 有很多哺乳動物的老錄音；<b>BBC 音效庫</b> 和 <b>維基共享資源</b> 也找得到一些。不過很多少見動物本來就很少叫（例如穿山甲、美西螈），所以不是每一種都有錄音。本網頁 20 種動物裡，有 7 種放了可以直接播放的真實錄音；沒有錄音的，我們就照實說明牠會發出什麼聲音，並附上搜尋連結。</p>
+    </div>
+    <div class="db">
+      <div class="box"><h3>xeno-canto</h3><p>荷蘭基金會經營，全世界的人上傳野外錄音，每一筆都有錄音者、地點和 CC 授權。以鳥為主，也有蛙、蝗蟲、蝙蝠和陸地哺乳動物。標註來源、非商業使用即可放在教學網頁。</p><a class="chip" href="https://xeno-canto.org/" target="_blank" rel="noopener">xeno-canto ↗</a></div>
+      <div class="box g"><h3>麥考利圖書館 Macaulay Library</h3><p>康乃爾大學鳥類研究室的資料庫，錄音最多、品質最好，也有哺乳動物、青蛙和昆蟲。授權比較嚴格，請在他們的網站上播放，不要下載轉貼。</p><a class="chip" href="https://search.macaulaylibrary.org/catalog?mediaType=audio" target="_blank" rel="noopener">搜尋錄音 ↗</a></div>
+      <div class="box g"><h3>Tierstimmenarchiv（柏林）</h3><p>德國柏林自然史博物館的「動物聲音檔案館」，收藏十幾萬筆動物錄音，很多是動物園裡錄的哺乳動物聲音，可以用學名搜尋。網站以德文和英文為主。</p><a class="chip" href="https://www.tierstimmenarchiv.de/" target="_blank" rel="noopener">Tierstimmenarchiv ↗</a></div>
+      <div class="box"><h3>BBC 音效庫 BBC Sound Effects</h3><p>英國 BBC 開放的音效庫，有不少動物聲音。採 RemArc 授權：個人、教學、研究用途可以使用，商業用途要另外購買。上課時直接在網站上播放最簡單。</p><a class="chip" href="https://sound-effects.bbcrewind.co.uk/" target="_blank" rel="noopener">BBC 音效庫 ↗</a></div>
+      <div class="box"><h3>維基共享資源 Wikimedia Commons</h3><p>維基百科的檔案庫，聲音檔多為公眾領域或 CC 授權，可以自由使用。動物叫聲數量不多，但本頁的耳廓狐和小貓熊就是從這裡找到的。</p><a class="chip" href="https://commons.wikimedia.org/w/index.php?search=animal+sound+filetype%3Aaudio&ns6=1" target="_blank" rel="noopener">搜尋聲音檔 ↗</a></div>
+      <div class="box g"><h3>YouTube 影片</h3><p>沒有開放錄音的動物，常常可以在動物園或保育單位拍的影片裡聽到聲音，例如台北動物園拍的馬來貘叫聲。本頁揭曉答案後，有些動物會附上「聽聲音」的影片。</p></div>
+    </div>
+    <div class="box" style="margin-top:18px">
+      <h3>本網頁 20 種動物的聲音</h3>
+      <p class="credit" style="margin:0 0 10px">標示 ND（禁止改作）的錄音保持原檔未修改；其他錄音只調整音量或轉成 mp3。</p>
+      <div class="tbl"><table class="cr" id="sndTable"></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- 帶領說明 -->
+<section class="view" id="guide">
+  <div class="bar"><div class="wrap">
+    <button class="brand" data-go="home" aria-label="回首頁">猜猜看 <small>RARE ANIMALS</small></button>
+    <span class="sp"></span>
+    <button class="btn small orange" data-go="start">開始猜</button>
+  </div></div>
+  <div class="wrap" style="padding-block:26px 10px">
+    <h2 class="page-title"><span class="e">How to Lead</span>給帶領者的活動說明</h2>
+    <div class="grid2">
+      <div class="box"><h3>怎麼帶（30–45 分鐘）</h3>
+        <ol class="steps">
+          <li>用投影或大電視開啟本頁，選「看照片的方式」：長輩建議看清楚照片，小朋友可以玩模糊或局部放大。</li>
+          <li>先不給提示，請大家說說看：牠像哪一種認識的動物？是什麼顏色？多大？</li>
+          <li>猜不到就按提示：住哪裡 → 多大 → 長相 → 吃什麼 → 驚人的事 → 名字提示。卡住時按「給三個選項」。</li>
+          <li>揭曉後挑 1–2 個小知識講，再用「聊一聊」的題目讓大家分享經驗。</li>
+          <li>最後一起聽聲音、看一小段影片，請大家模仿牠的動作或叫聲。</li>
+        </ol></div>
+      <div class="box g"><h3>帶領小撇步</h3>
+        <ol class="steps">
+          <li>一次玩 6–8 隻就好，聊天比答對重要。</li>
+          <li>說出差不多的名字也算對，例如「六角恐龍」、「山貓」、「鯪鯉」。</li>
+          <li>失智症長輩可以直接用「給三個選項」，降低挫折感。</li>
+          <li>搭配動作：學樹懶慢慢伸手、學鯨頭鸛單腳站著不動、學水獺划水，順便活動身體。</li>
+          <li>談到保育時，多用台灣的例子：石虎路殺、穿山甲、金門水獺。</li>
+          <li>影片在 GitHub 網頁版可以直接播放；網路不穩時，先播本頁內建的錄音。</li>
+        </ol></div>
+    </div>
+    <div class="box" style="margin-top:18px">
+      <h3>照片來源與授權</h3>
+      <p class="credit" style="margin:0 0 10px">照片都來自維基共享資源（Wikimedia Commons），依各自授權標示作者；網頁上是縮小後的版本。</p>
+      <div class="tbl"><table class="cr" id="imgTable"></table></div>
+    </div>
+    <div class="box" style="margin-top:18px">
+      <h3>內容說明</h3>
+      <p class="credit" style="margin:0">中文名以台灣常用名稱為主。保育等級：國際為 IUCN 紅色名錄，台灣為農業部公告的保育類野生動物名錄，如有更新以官方公告為準。體型、數量為大約數字，方便口頭比較。影片皆連到 YouTube 原頻道，版權屬原作者。</p>
+    </div>
+    <div class="sign"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 005.66 0l3-3a4 4 0 00-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 00-5.66 0l-3 3a4 4 0 005.66 5.66l1-1"/></svg></span><span>設計者｜愛迪樂　<b>鍾孟修 職能治療師</b></span></div>
+  </div>
+</section>
+
+<audio id="aud" preload="none"></audio>
+<script src="data/animals.js"></script>
+<script src="data/media.js"></script>
+<script>
+(function(){
+"use strict";
+const A=window.ANIMALS, M=window.MEDIA;
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const store={get(k,d){try{const v=localStorage.getItem("rareq_"+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem("rareq_"+k,JSON.stringify(v))}catch(e){}}};
+const host=location.hostname;
+const CAN_EMBED=/github\.io$/.test(host)||host==="localhost"||host==="127.0.0.1";
+const REGION={tw:"台灣",asia:"亞洲",africa:"非洲",america:"美洲",oceania:"大洋洲"};
+const IUCN={CR:"極危",EN:"瀕危",VU:"易危",NT:"近危",LC:"無危"};
+const HINTS=[{k:"place",t:"住哪裡"},{k:"size",t:"多大"},{k:"look",t:"長相"},{k:"food",t:"吃什麼"},{k:"wow",t:"驚人的事"},{k:"name",t:"名字提示"},{k:"choice",t:"給三個選項"}];
+const EXT='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>';
+const st={mode:store.get("mode","photo"),region:store.get("region","all"),order:store.get("order","list"),list:[],pos:0,used:[],picked:null,gfilter:"all"};
+const aud=$("#aud");
+const cur=()=>st.list[st.pos];
+
+function show(id){$$(".view").forEach(v=>v.classList.toggle("on",v.id===id));scrollTo(0,0);if(id!=="answer"&&id!=="quiz")stopAudio();if(id==="gallery")renderGallery();if(id==="home"&&location.hash)history.replaceState(null,"",location.pathname+location.search)}
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function pool(){return A.filter(a=>st.region==="all"||a.region.includes(st.region))}
+function buildList(startKey){
+  if(startKey){const p=pool().some(a=>a.key===startKey)?pool():A.slice();st.list=p;st.pos=p.findIndex(a=>a.key===startKey);return}
+  let p=pool();
+  if(st.order==="rand")p=shuffle(p.slice()).slice(0,8);else if(st.order==="randall")p=shuffle(p.slice());
+  st.list=p;st.pos=0;
+}
+function seg(id,key){$$("#"+id+" button").forEach(b=>{b.classList.toggle("on",b.dataset.v===st[key]);b.onclick=()=>{st[key]=b.dataset.v;store.set(key,st[key]);seg(id,key)}})}
+seg("modeSeg","mode");seg("regionSeg","region");seg("orderSeg","order");
+
+$$("[data-go]").forEach(b=>b.addEventListener("click",()=>{const g=b.dataset.go;if(g==="start"){buildList();openQuiz()}else show(g)}));
+
+/* ---------- 照片效果 ---------- */
+function applyPhoto(){
+  const n=st.used.length, img=$("#qImg");
+  img.style.filter=st.mode==="blur"?`blur(${[26,20,14,9,5,2,0,0][Math.min(n,7)]}px)`:"none";
+  img.style.transform=st.mode==="zoom"?`scale(${[3.4,2.8,2.2,1.8,1.45,1.2,1,1][Math.min(n,7)]})`:"none";
+  img.style.transformOrigin=(cur().focus||"52% 42%");
+}
+/* ---------- 猜題 ---------- */
+function openQuiz(){
+  const a=cur(); stopAudio(); st.used=[]; st.picked=null;
+  $("#qImg").src="assets/img/"+a.key+".jpg";
+  $("#qNum").innerHTML=`${st.pos+1}<small>/${st.list.length}</small>`;
+  $("#qProg").textContent=`${st.pos+1} / ${st.list.length}`;
+  $("#qPrev").disabled=st.pos===0; $("#qPrev").style.opacity=st.pos===0?.4:1;
+  renderHints(); applyPhoto(); show("quiz");
+  history.replaceState(null,"","#"+a.key);
+}
+function renderHints(){
+  const a=cur();
+  $("#hintBtns").innerHTML=HINTS.map((h,i)=>`<button class="hb ${st.used.includes(h.k)?"used":""}" data-k="${h.k}"><i>${i+1}</i>${h.t}</button>`).join("");
+  $$("#hintBtns .hb").forEach(b=>b.onclick=()=>reveal(b.dataset.k));
+  $("#hintList").innerHTML=st.used.map(k=>{
+    const h=HINTS.find(x=>x.k===k);
+    if(k==="choice")return `<li><span class="tag">選項</span><div class="choices">${choicesFor(a).map(c=>`<button data-c="${c.key}" class="${st.picked?(c.key===a.key?"yes":(c.key===st.picked?"no":"")):""}">${esc(c.name)}</button>`).join("")}</div></li>`;
+    const txt=k==="name"?`名字有 ${[...a.name].length} 個字，第一個字是「${[...a.name][0]}」。`:a.hints[k];
+    return `<li><span class="tag">${h.t}</span><span>${esc(txt)}</span></li>`;
+  }).join("");
+  $$("#hintList .choices button").forEach(b=>b.onclick=()=>{st.picked=b.dataset.c;renderHints();if(b.dataset.c===a.key)setTimeout(showAnswer,700)});
+  $("#emptyTip").hidden=st.used.length>0;
+}
+function reveal(k){if(!st.used.includes(k)){st.used.push(k);renderHints();applyPhoto()}}
+function nextHint(){const h=HINTS.find(h=>!st.used.includes(h.k));if(h)reveal(h.k)}
+const choiceCache={};
+function choicesFor(a){
+  if(!choiceCache[a.key]){const others=shuffle(A.filter(x=>x.key!==a.key)).slice(0,2);choiceCache[a.key]=shuffle([a,...others])}
+  return choiceCache[a.key];
+}
+function goNext(){if(st.pos<st.list.length-1){st.pos++;openQuiz()}else show("gallery")}
+$("#qPrev").onclick=()=>{if(st.pos>0){st.pos--;openQuiz()}};
+$("#qNext").onclick=goNext;
+$("#revealBtn").onclick=()=>showAnswer();
+
+/* ---------- 聲音 ---------- */
+function setPlayIcon(on){$$(".pp").forEach(b=>b.innerHTML=on?'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>':'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>')}
+function stopAudio(){aud.pause();try{aud.currentTime=0}catch(e){}setPlayIcon(false);const t=$(".track i");if(t)t.style.width="0"}
+function toggleAudio(a){
+  if(!M[a.key].snd)return;
+  if(aud.dataset.k===a.key&&!aud.paused){aud.pause();setPlayIcon(false);return}
+  if(aud.dataset.k!==a.key){aud.src="assets/audio/"+a.key+".mp3";aud.dataset.k=a.key}
+  aud.play().then(()=>setPlayIcon(true)).catch(()=>setPlayIcon(false));
+}
+aud.addEventListener("timeupdate",()=>{const t=$(".track i"),m=$(".tm");if(t&&aud.duration)t.style.width=(aud.currentTime/aud.duration*100)+"%";if(m){const s=Math.floor(aud.currentTime);m.textContent=Math.floor(s/60)+":"+String(s%60).padStart(2,"0")}});
+aud.addEventListener("ended",()=>setPlayIcon(false));
+
+/* ---------- 揭曉 ---------- */
+function vidHTML(v){
+  const th=`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`, url=`https://www.youtube.com/watch?v=${v.id}`;
+  const pl='<span class="pl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>';
+  if(CAN_EMBED)return `<div class="vid"><div class="th" data-yt="${v.id}" role="button" tabindex="0" aria-label="播放影片：${esc(v.title)}"><img src="${th}" alt="" loading="lazy" onerror="this.remove()">${pl}</div><div class="cap"><b>${esc(v.title)}</b><span>${esc(v.ch)}・<a href="${url}" target="_blank" rel="noopener">在 YouTube 開啟 ↗</a></span></div></div>`;
+  return `<a class="vid" href="${url}" target="_blank" rel="noopener"><div class="th"><img src="${th}" alt="" loading="lazy" onerror="this.remove()">${pl}</div><div class="cap"><b>${esc(v.title)}</b><span>${esc(v.ch)}・到 YouTube 觀看 ↗</span></div></a>`;
+}
+function showAnswer(){
+  const a=cur(), m=M[a.key]; stopAudio();
+  const n=st.used.filter(k=>k!=="choice").length;
+  const praise=n===0?"不用提示就猜到！":n<=2?`用了 ${n} 個提示猜到`:`用了 ${n} 個提示，大家一起想出來了`;
+  const badges=[`<span class="badge"><span class="iucn ${a.iucn}">${a.iucn}</span>IUCN：${IUCN[a.iucn]}</span>`];
+  a.region.forEach(r=>badges.push(`<span class="badge">${REGION[r]}</span>`));
+  if(a.tw)badges.push(`<span class="badge">${esc(a.tw)}</span>`);
+  if(a.alias)badges.push(`<span class="badge">${esc(a.alias)}</span>`);
+  const s=m.snd;
+  let sound;
+  if(s){
+    const src=s.src==="xc"?`xeno-canto <a href="https://xeno-canto.org/${s.id}" target="_blank" rel="noopener">XC${s.id}</a>`:`<a href="${s.page}" target="_blank" rel="noopener">Wikimedia Commons</a>`;
+    sound=`<div class="player"><button class="pp" aria-label="播放聲音"></button><div class="track" aria-hidden="true"><i></i></div><span class="tm">0:00</span></div>
+    <p style="margin:0">${esc(a.voice)}</p>
+    <p class="credit">錄音：${esc(s.rec)}（${esc(s.where)}），${src}，${esc(s.lic)}；${esc(s.cut)}。</p>`;
+  }else sound=`<div class="silent">${esc(a.voice)}</div>`;
+  if(m.sndvid)sound+=`<div class="vids" style="grid-template-columns:minmax(0,1fr);max-width:560px">${vidHTML(m.sndvid)}</div>`;
+  const q=encodeURIComponent(a.name+" "+a.en);
+  const lic=m.img.licurl?`<a href="${m.img.licurl}" target="_blank" rel="noopener">${esc(m.img.lic)}</a>`:esc(m.img.lic);
+  $("#ansBody").innerHTML=`
+  <div class="poster"><div class="wrap">
+    <div class="ans-hero">
+      <div class="ans-name"><span class="pre">${esc(praise)}</span><span class="zh">${esc(a.name)}</span><span class="en">${esc(a.en)}</span><span class="sci">${esc(a.sci)}${a.formal!==a.name?`　・　正式名稱：${esc(a.formal)}`:""}</span>
+        <div class="badges">${badges.join("")}</div></div>
+      <div class="frame"><div class="photo"><img src="assets/img/${a.key}.jpg" alt="${esc(a.name)}"></div></div>
+    </div>
+  </div></div>
+  <div class="wrap">
+    <div class="grid2">
+      <div class="box"><h3>住在哪裡</h3><p style="margin:0">${esc(a.where)}</p></div>
+      <div class="box g"><h3>吃什麼</h3><p style="margin:0">${esc(a.diet)}</p></div>
+    </div>
+    <div class="grid2">
+      <div class="box"><h3>驚人小知識</h3><ul class="facts">${a.facts.map(f=>`<li>${esc(f)}</li>`).join("")}</ul></div>
+      <div class="box g"><h3>聊一聊</h3><div class="talk">${a.talk.map(t=>`<div>${esc(t)}</div>`).join("")}<div class="kidq">考考小朋友：${esc(a.kid)}</div></div></div>
+    </div>
+    <div class="box" style="margin-top:18px"><h3>聽聽牠的聲音</h3>${sound}
+      <div class="linkrow">
+        ${m.xcsp?`<a class="chip" href="https://xeno-canto.org/species/${m.xcsp}" target="_blank" rel="noopener">${EXT}xeno-canto 更多錄音</a>`:""}
+        <a class="chip" href="https://sound-effects.bbcrewind.co.uk/search?q=${encodeURIComponent(a.en)}" target="_blank" rel="noopener">${EXT}BBC 音效庫搜尋</a>
+        <a class="chip" href="https://www.youtube.com/results?search_query=${encodeURIComponent(a.en+" sound")}" target="_blank" rel="noopener">${EXT}YouTube 搜尋叫聲</a>
+      </div>
+    </div>
+    <div class="box g" style="margin-top:18px"><h3>看更多</h3>
+      <div class="linkrow">
+        <a class="chip" href="https://www.google.com/search?tbm=isch&q=${q}" target="_blank" rel="noopener">${EXT}Google 圖片</a>
+        <a class="chip" href="https://www.youtube.com/results?search_query=${encodeURIComponent(a.name+" #shorts")}" target="_blank" rel="noopener">${EXT}YouTube 短影音</a>
+        <a class="chip" href="https://zh.wikipedia.org/w/index.php?variant=zh-tw&search=${encodeURIComponent(a.sci.split("（")[0])}" target="_blank" rel="noopener">${EXT}維基百科</a>
+      </div>
+      <div class="vids">${m.yt.map(vidHTML).join("")}</div>
+      <p class="credit">照片：${esc(m.img.author)}，${lic}，<a href="${m.img.page}" target="_blank" rel="noopener">Wikimedia Commons</a></p>
+    </div>
+    <div class="ans-nav"><button class="btn ghost" id="aBack2">回到提示</button><button class="btn orange" id="aNext2">${st.pos<st.list.length-1?"下一隻動物":"看圖鑑"}</button></div>
+    <div class="sign"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 005.66 0l3-3a4 4 0 00-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 00-5.66 0l-3 3a4 4 0 005.66 5.66l1-1"/></svg></span><span>設計者｜愛迪樂　<b>鍾孟修 職能治療師</b></span></div>
+  </div>`;
+  if(s){$(".pp").onclick=()=>toggleAudio(a);$(".track").onclick=e=>{if(aud.dataset.k!==a.key){toggleAudio(a);return}const r=e.currentTarget.getBoundingClientRect();if(aud.duration)aud.currentTime=(e.clientX-r.left)/r.width*aud.duration};setPlayIcon(false)}
+  $$("[data-yt]").forEach(t=>{const go=()=>{t.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${t.dataset.yt}?autoplay=1&rel=0" title="YouTube 影片" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;stopAudio()};t.onclick=go;t.onkeydown=e=>{if(e.key==="Enter")go()}});
+  $("#aBack2").onclick=$("#aBack").onclick=()=>show("quiz");
+  $("#aNext2").onclick=$("#aNext").onclick=goNext;
+  $("#aProg").textContent=`${st.pos+1} / ${st.list.length}`;
+  $("#aNext span").textContent=st.pos<st.list.length-1?"下一隻":"圖鑑";
+  const done=store.get("done",[]);if(!done.includes(a.key)){done.push(a.key);store.set("done",done)}
+  show("answer"); history.replaceState(null,"","#"+a.key);
+}
+
+/* ---------- 圖鑑 ---------- */
+function renderGallery(){
+  $$("#gFilter button").forEach(b=>{b.classList.toggle("on",b.dataset.v===st.gfilter);b.onclick=()=>{st.gfilter=b.dataset.v;renderGallery()}});
+  const done=store.get("done",[]);
+  const list=A.filter(a=>st.gfilter==="all"||(st.gfilter==="snd"?!!M[a.key].snd:a.region.includes(st.gfilter)));
+  $("#gGrid").innerHTML=list.map(a=>`<button class="gitem" data-k="${a.key}"><img src="assets/img/${a.key}.jpg" alt="${esc(a.name)}" loading="lazy"><span class="t"><b>${esc(a.name)}</b><span>${esc(a.en)}</span><span class="row"><span class="iucn ${a.iucn}" title="IUCN ${IUCN[a.iucn]}">${a.iucn}</span>${a.region.map(r=>`<span class="mini">${REGION[r]}</span>`).join("")}${M[a.key].snd?'<span class="mini">有叫聲</span>':""}${done.includes(a.key)?'<span class="mini done">玩過</span>':""}</span></span></button>`).join("");
+  $$("#gGrid .gitem").forEach(b=>b.onclick=()=>{buildList(b.dataset.k);openQuiz()});
+}
+
+/* ---------- 來源表 ---------- */
+$("#sndTable").innerHTML="<tr><th>動物</th><th>本頁聲音</th><th>來源</th><th>錄音者／地點</th><th>授權</th></tr>"+A.map(a=>{const m=M[a.key],s=m.snd;
+  if(s){const src=s.src==="xc"?`<a href="https://xeno-canto.org/${s.id}" target="_blank" rel="noopener">xeno-canto XC${s.id}</a>`:`<a href="${s.page}" target="_blank" rel="noopener">Wikimedia Commons</a>`;return `<tr><td>${esc(a.name)}</td><td>真實錄音</td><td>${src}</td><td>${esc(s.rec)}／${esc(s.where)}</td><td>${esc(s.lic)}</td></tr>`}
+  return `<tr><td>${esc(a.name)}</td><td>${m.sndvid?"影片中有聲音":"沒有開放錄音"}</td><td>${m.sndvid?`<a href="https://www.youtube.com/watch?v=${m.sndvid.id}" target="_blank" rel="noopener">YouTube</a>`:"—"}</td><td colspan="2">${esc(a.voice)}</td></tr>`}).join("");
+$("#imgTable").innerHTML="<tr><th>動物</th><th>攝影者</th><th>授權</th><th>原始檔案</th></tr>"+A.map(a=>{const i=M[a.key].img;return `<tr><td>${esc(a.name)}</td><td>${esc(i.author)}</td><td>${i.licurl?`<a href="${i.licurl}" target="_blank" rel="noopener">${esc(i.lic)}</a>`:esc(i.lic)}</td><td><a href="${i.page}" target="_blank" rel="noopener">Commons</a></td></tr>`}).join("");
+
+/* ---------- 鍵盤 ---------- */
+addEventListener("keydown",e=>{
+  if(e.target.closest("input,textarea")||e.metaKey||e.ctrlKey)return;
+  const q=$("#quiz").classList.contains("on"),an=$("#answer").classList.contains("on");
+  if(q&&(e.key===" "||e.key==="ArrowDown")){e.preventDefault();nextHint()}
+  else if(q&&e.key==="Enter"&&!e.target.closest("button")){e.preventDefault();showAnswer()}
+  else if((q||an)&&e.key==="ArrowRight")goNext();
+  else if(q&&e.key==="ArrowLeft")$("#qPrev").click();
+  else if(an&&(e.key==="p"||e.key==="P"))toggleAudio(cur());
+  else if(e.key==="Escape")show("home");
+});
+
+/* ---------- 網址 #key 直接開 ---------- */
+function fromHash(){const k=decodeURIComponent(location.hash.slice(1));if(k&&A.some(a=>a.key===k)&&!(st.list.length&&cur()&&cur().key===k&&!$("#home").classList.contains("on"))){buildList(k);openQuiz()}}
+fromHash();addEventListener("hashchange",fromHash);
+})();
+</script>
+</body>
+</html>
