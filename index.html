@@ -110,7 +110,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hint-btns{display:flex;flex-wrap:wrap;gap:10px}
 .hb{display:inline-flex;align-items:center;gap:8px;min-height:54px;padding:0 18px;border-radius:999px;border:0;background:var(--orange-d);color:#fff;font-weight:900;font-size:19px}
 .hb:nth-child(even){background:var(--green)}
-.hb.used{background:#E7DED3;color:#7A7166}
+.hb.used{background:#E7DED3;color:#5A544B}
+.hb.used:hover{background:#DCCFBF}
+.hb.open{background:var(--ink);color:#fff;box-shadow:0 0 0 3px var(--paper),0 0 0 6px var(--orange)}
+.hint-note{font-size:16px;color:var(--muted);margin:12px 0 0;min-height:1.5em}
 .hb i{font-style:normal;font-family:var(--display);font-size:18px;background:rgba(255,255,255,.22);border-radius:50%;width:28px;height:28px;display:grid;place-items:center}
 .hints{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:10px}
 .hints li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;background:var(--paper);border-radius:12px;padding:12px 16px;font-size:22px;font-weight:700;animation:pop .35s ease}
@@ -277,6 +280,7 @@ ol.steps{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px;
         <h2>一次打開一個提示</h2>
         <p class="qsub">先讓大家說說看：牠長什麼樣子？像哪一種你認識的動物？</p>
         <div class="hint-btns" id="hintBtns"></div>
+        <p class="hint-note" id="hintNote"></p>
         <ul class="hints" id="hintList"></ul>
         <p class="empty-tip" id="emptyTip">鍵盤：<span class="kbd">空白鍵</span> 下一個提示　<span class="kbd">Enter</span> 揭曉　<span class="kbd">→</span> 下一隻</p>
         <div class="reveal-row">
@@ -429,7 +433,7 @@ function applyPhoto(){
 }
 /* ---------- 猜題 ---------- */
 function openQuiz(){
-  const a=cur(); stopAudio(); st.used=[]; st.picked=null;
+  const a=cur(); stopAudio(); st.used=[]; st.open=null; st.picked=null;
   $("#qImg").src="assets/img/"+a.key+".jpg";
   $("#qNum").innerHTML=`${st.pos+1}<small>/${st.list.length}</small>`;
   $("#qProg").textContent=`${st.pos+1} / ${st.list.length}`;
@@ -439,9 +443,11 @@ function openQuiz(){
 }
 function renderHints(){
   const a=cur();
-  $("#hintBtns").innerHTML=HINTS.map((h,i)=>`<button class="hb ${st.used.includes(h.k)?"used":""}" data-k="${h.k}"><i>${i+1}</i>${h.t}</button>`).join("");
+  $("#hintBtns").innerHTML=HINTS.map((h,i)=>{const u=st.used.includes(h.k),o=st.open===h.k;return `<button class="hb ${o?"open":u?"used":""}" data-k="${h.k}" aria-pressed="${o}"><i>${u&&!o?"✓":i+1}</i>${h.t}</button>`}).join("");
   $$("#hintBtns .hb").forEach(b=>b.onclick=()=>reveal(b.dataset.k));
-  $("#hintList").innerHTML=st.used.map(k=>{
+  const nUsed=st.used.length;
+  $("#hintNote").textContent=nUsed?`已打開 ${nUsed} 個提示（灰色打勾的可以再點一次打開來看）`:"";
+  $("#hintList").innerHTML=(st.open?[st.open]:[]).map(k=>{
     const h=HINTS.find(x=>x.k===k);
     if(k==="choice")return `<li><span class="tag">選項</span><div class="choices">${choicesFor(a).map(c=>`<button data-c="${c.key}" class="${st.picked?(c.key===a.key?"yes":(c.key===st.picked?"no":"")):""}">${esc(c.name)}</button>`).join("")}</div></li>`;
     const txt=k==="name"?`名字有 ${[...a.name].length} 個字，第一個字是「${[...a.name][0]}」。`:a.hints[k];
@@ -450,7 +456,11 @@ function renderHints(){
   $$("#hintList .choices button").forEach(b=>b.onclick=()=>{st.picked=b.dataset.c;renderHints();if(b.dataset.c===a.key)setTimeout(showAnswer,700)});
   $("#emptyTip").hidden=st.used.length>0;
 }
-function reveal(k){if(!st.used.includes(k)){st.used.push(k);renderHints();applyPhoto()}}
+function reveal(k){
+  if(!st.used.includes(k)){st.used.push(k);st.open=k;applyPhoto()}
+  else st.open=(st.open===k?null:k);
+  renderHints();
+}
 function nextHint(){const h=HINTS.find(h=>!st.used.includes(h.k));if(h)reveal(h.k)}
 const choiceCache={};
 function choicesFor(a){
