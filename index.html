@@ -399,8 +399,8 @@ ol.steps{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px;
 </section>
 
 <audio id="aud" preload="none"></audio>
-<script src="data/animals.js?v=4"></script>
-<script src="data/media.js?v=4"></script>
+<script src="data/animals.js?v=5"></script>
+<script src="data/media.js?v=5"></script>
 <script>
 (function(){
 "use strict";
@@ -443,9 +443,10 @@ function wirePics(box,a){
   box.insertAdjacentHTML("beforeend",`<button class="pnav prev" aria-label="上一張照片">${ARR_L}</button><button class="pnav next" aria-label="下一張照片">${ARR_R}</button><div class="pbar"><span class="pc">照片 1/${L.length}</span>${L.map((_,i)=>`<button data-i="${i}" aria-label="第 ${i+1} 張照片"${i?"":' class="on"'}></button>`).join("")}</div>`);
   let i=0;
   const set=j=>{i=(j+L.length)%L.length;img.src=L[i];box.querySelectorAll(".pbar button").forEach((d,n)=>d.classList.toggle("on",n===i));box.querySelector(".pc").textContent=`照片 ${i+1}/${L.length}`};
-  box.querySelector(".prev").onclick=e=>{e.stopPropagation();set(i-1)};
-  box.querySelector(".next").onclick=e=>{e.stopPropagation();set(i+1)};
-  box.querySelectorAll(".pbar button").forEach(d=>d.onclick=e=>{e.stopPropagation();set(+d.dataset.i)});
+  const go=(e,j)=>{e.stopPropagation();if(e.detail)e.currentTarget.blur();set(j)};
+  box.querySelector(".prev").onclick=e=>go(e,i-1);
+  box.querySelector(".next").onclick=e=>go(e,i+1);
+  box.querySelectorAll(".pbar button").forEach(d=>d.onclick=e=>go(e,+d.dataset.i));
   box._set=d=>set(i+d);
 }
 function applyPhoto(){

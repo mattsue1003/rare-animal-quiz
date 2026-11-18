@@ -528,7 +528,7 @@ window.MEDIA={
    },
    {
     "author": "Dave Pape",
-    "lic": "Public domain",
+    "lic": "公眾領域",
     "licurl": "",
     "page": "https://commons.wikimedia.org/wiki/File:Ailurus_fulgens_-_Syracuse_Zoo.jpg"
    }
@@ -1512,7 +1512,7 @@ window.MEDIA={
   "more": [
    {
     "author": "Chuckupd",
-    "lic": "Public domain",
+    "lic": "公眾領域",
     "licurl": "",
     "page": "https://commons.wikimedia.org/wiki/File:Pygmy_hippopotamus_pair.jpg"
    },
