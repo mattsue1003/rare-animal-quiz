@@ -18,6 +18,20 @@ window.MEDIA={
     "title": "救傷穿山甲的奇幻旅程－斷尾「阿穿」苦盡甘來當爸 Life of Pangolin \"CHUAN\" - The father of pangopup",
     "ch": "臺北市立動物園"
    }
+  ],
+  "more": [
+   {
+    "author": "Licheng Shih",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Manis_pentadactyla_pentadactyla_131662800.jpg"
+   },
+   {
+    "author": "Licheng Shih",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Manis_pentadactyla_pentadactyla_131662828.jpg"
+   }
   ]
  },
  "leopardcat": {
@@ -37,6 +51,20 @@ window.MEDIA={
     "id": "RDo6R5rpY2Q",
     "title": "讓石虎平安回家！苗栗鄉道設友善動物廊道【大千世界】保育類動物石虎",
     "ch": "新奇世界 Amazing World"
+   }
+  ],
+  "more": [
+   {
+    "author": "Ridho Illyasa",
+    "lic": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Prionailurus_bengalensis_in_Indonesia_02.jpg"
+   },
+   {
+    "author": "Ian Dugdale",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Prionailurus_bengalensis_544308053.jpg"
    }
   ]
  },
@@ -73,7 +101,21 @@ window.MEDIA={
    "id": "uXvzLldW2Ao",
    "title": "金門歐亞水獺(Lutra lutra)- 神秘的金門水獺叫聲曝光與激烈互動類似求偶Eurasian otter in Kinmen island (otter sounds)",
    "ch": "安頭金門 Eurasian otter in Kinmen island"
-  }
+  },
+  "more": [
+   {
+    "author": "Unknown",
+    "lic": "CC BY-SA 3.0",
+    "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "page": "https://commons.wikimedia.org/wiki/File:Fischotter_Lutra_lutra1.jpg"
+   },
+   {
+    "author": "Byrdyak",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4%D1%80%D0%B0.jpg"
+   }
+  ]
  },
  "blackbear": {
   "img": {
@@ -92,6 +134,20 @@ window.MEDIA={
     "id": "rKi9YGvcFqI",
     "title": "驚喜！台灣黑熊出沒大武山　半夜偷吃蜜",
     "ch": "TVBS NEWS"
+   }
+  ],
+  "more": [
+   {
+    "author": "Guérin Nicolas (messages)",
+    "lic": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ursus_thibetanus_3_(Wroclaw_zoo).JPG"
+   },
+   {
+    "author": "Shiv's fotografia",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Himalayan_black_bear_(Ursus_thibetanus)_is_a_rare_subspecies_of_the_Asiatic_black_bear._22.jpg"
    }
   ]
  },
@@ -113,6 +169,20 @@ window.MEDIA={
     "title": "【台灣生態紀錄----很萌的食蟹獴家族】保育類｜Crab-eating Mongoose｜母獸帶著幼獴｜可愛｜90MM｜｜Sony A1",
     "ch": "Chen Eric"
    }
+  ],
+  "more": [
+   {
+    "author": "(c) Austin 0201, some rights reserved (CC BY)",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Crab-eating_Mongoose_imported_from_iNaturalist_photo_11618035_on_4_August_2024.jpg"
+   },
+   {
+    "author": "(c) Rejoice Gassah, some rights reserved (CC BY)",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Crab-eating_Mongoose_imported_from_iNaturalist_photo_216148353_on_4_August_2024.jpg"
+   }
   ]
  },
  "anteater": {
@@ -133,6 +203,20 @@ window.MEDIA={
     "title": "大食蟻獸「野蠻女友」好難追  「三平」母胎單身技巧待加強",
     "ch": "臺北市立動物園"
    }
+  ],
+  "more": [
+   {
+    "author": "Larissa Vaccarini Ávila",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Myrmecophaga_tridactyla_86003248.jpg"
+   },
+   {
+    "author": "Giles Laurent",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:185_Giant_anteater_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg"
+   }
   ]
  },
  "ayeaye": {
@@ -152,6 +236,20 @@ window.MEDIA={
     "id": "k1CqxkpfSHc",
     "title": "Endangered Aye-aye in action",
     "ch": "Naznaz606"
+   }
+  ],
+  "more": [
+   {
+    "author": "Frank Vassen from Brussels, Belgium",
+    "lic": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Aye-aye_(Daubentonia_madagascariensis),_Tsimbazaza_Zoo,_Madagascar_(3897947810).jpg"
+   },
+   {
+    "author": "Elias Neideck",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Aye_aye_Frankfurt.jpg"
    }
   ]
  },
@@ -178,7 +276,21 @@ window.MEDIA={
    "id": "qEzVHKjoCu8",
    "title": "Sloth Cry Compilation HD 樹懶叫的聲音大匯集",
    "ch": "DaKen"
-  }
+  },
+  "more": [
+   {
+    "author": "Christian Mehlführer, User:Chmehl",
+    "lic": "CC BY 2.5",
+    "licurl": "https://creativecommons.org/licenses/by/2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:MC_Drei-Finger-Faultier.jpg"
+   },
+   {
+    "author": "Anthony Batista",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Bradypus_variegatus_423905618.jpg"
+   }
+  ]
  },
  "platypus": {
   "img": {
@@ -197,6 +309,20 @@ window.MEDIA={
     "id": "yHAcb1iyjs0",
     "title": "《鴨嘴獸，platypus》一分鐘了解鴨嘴獸。「世界上神奇的動物」",
     "ch": "智識探索站"
+   }
+  ],
+  "more": [
+   {
+    "author": "Charles J. Sharp",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Duck-billed_platypus_(Ornithorhynchus_anatinus)_Scottsdale_3.jpg"
+   },
+   {
+    "author": "robertpaulyoung",
+    "lic": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ornithorhynchus_anatinus_-_feeding.jpg"
    }
   ]
  },
@@ -228,7 +354,21 @@ window.MEDIA={
    "type": "call",
    "cut": "原始檔未修改"
   },
-  "xcsp": "Petaurus-breviceps"
+  "xcsp": "Petaurus-breviceps",
+  "more": [
+   {
+    "author": "Russell Best",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Petaurus_breviceps_75696151.jpg"
+   },
+   {
+    "author": "Ben Jobson",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Petaurus_breviceps_479420499.jpg"
+   }
+  ]
  },
  "fennec": {
   "img": {
@@ -257,7 +397,21 @@ window.MEDIA={
    "where": "（未註明）",
    "type": "singing",
    "cut": "轉成 mp3、音量調整"
-  }
+  },
+  "more": [
+   {
+    "author": "Derek Keats from Johannesburg, South Africa",
+    "lic": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Fennec_(Vulpes_zerda)_(5258821948).jpg"
+   },
+   {
+    "author": "Grendelkhan",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sleeping_Vulpes_zerda_at_Happy_Hollow,_closeup.jpg"
+   }
+  ]
  },
  "okapi": {
   "img": {
@@ -276,6 +430,20 @@ window.MEDIA={
     "id": "pc6S7gGKWIw",
     "title": "Who \"Discovered\" the Okapi?",
     "ch": "Bizarre Beasts"
+   }
+  ],
+  "more": [
+   {
+    "author": "NasserHalaweh",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Giraffidae_Okapia_johnstoni_3.2.jpg"
+   },
+   {
+    "author": "Alan Eng from Brussels, Belgium",
+    "lic": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Okapi_and_son.jpg"
    }
   ]
  },
@@ -307,7 +475,21 @@ window.MEDIA={
    "type": "call",
    "cut": "音量調整"
   },
-  "xcsp": "Hydrochoerus-hydrochaeris"
+  "xcsp": "Hydrochoerus-hydrochaeris",
+  "more": [
+   {
+    "author": "Charles J. Sharp",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Yellow-headed_caracara_(Milvago_chimachima)_on_capybara_(Hydrochoeris_hydrochaeris).JPG"
+   },
+   {
+    "author": "Giles Laurent",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:073_Capybara_mother_and_baby_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg"
+   }
+  ]
  },
  "redpanda": {
   "img": {
@@ -336,7 +518,21 @@ window.MEDIA={
    "where": "（未註明）",
    "type": "twittering",
    "cut": "轉成 mp3、音量調整"
-  }
+  },
+  "more": [
+   {
+    "author": "Christian Mehlführer, User:Chmehl. Edit by Böhringer",
+    "lic": "CC BY 2.5",
+    "licurl": "https://creativecommons.org/licenses/by/2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:MC_Kleiner_Panda.jpg"
+   },
+   {
+    "author": "Dave Pape",
+    "lic": "Public domain",
+    "licurl": "",
+    "page": "https://commons.wikimedia.org/wiki/File:Ailurus_fulgens_-_Syracuse_Zoo.jpg"
+   }
+  ]
  },
  "snowleopard": {
   "img": {
@@ -366,7 +562,21 @@ window.MEDIA={
    "type": "uncertain",
    "cut": "音量調整"
   },
-  "xcsp": "Panthera-uncia"
+  "xcsp": "Panthera-uncia",
+  "more": [
+   {
+    "author": "H. Zell",
+    "lic": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Panthera_uncia_-_Zoo_Karlsruhe.jpg"
+   },
+   {
+    "author": "Tambako The Jaguar",
+    "lic": "CC BY-SA 2.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Snow_leopard_portrait.jpg"
+   }
+  ]
  },
  "shoebill": {
   "img": {
@@ -391,7 +601,21 @@ window.MEDIA={
    "id": "7_SqXlvMGtg",
    "title": "20160426 神戶動物王國 鯨頭鸛的叫聲 shoebill",
    "ch": "Kerry Yao"
-  }
+  },
+  "more": [
+   {
+    "author": "Olaf Oliviero Riemer",
+    "lic": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Balaeniceps_rex_(Schuhschnabel_-_Shoebill)_-_Weltvogelpark_Walsrode_2010-10.jpg"
+   },
+   {
+    "author": "Quartl",
+    "lic": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Balaeniceps_rex_qtl3.jpg"
+   }
+  ]
  },
  "axolotl": {
   "img": {
@@ -410,6 +634,20 @@ window.MEDIA={
     "id": "1-Wpn3cTcN0",
     "title": "六角龍BB 進食（六角恐龍 墨西哥鈍口螈 六角蠑螈 美西螈 Axolotl）",
     "ch": "LuckyStar"
+   }
+  ],
+  "more": [
+   {
+    "author": "Ruben Undheim from Trondheim, Norway",
+    "lic": "CC BY-SA 2.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ambystoma_mexicanum_(6337857516).jpg"
+   },
+   {
+    "author": "Kristof Magnusson",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Axolotl_Ambystoma_mexicanum_Aquarium_Zoo_Berlin,_2007.jpg"
    }
   ]
  },
@@ -436,7 +674,21 @@ window.MEDIA={
    "id": "EBSByxUoVus",
    "title": "馬來貘Malayan Tapir叫聲 Taipei Zoo",
    "ch": "Best Wang"
-  }
+  },
+  "more": [
+   {
+    "author": "Jan Ebr",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Tapirus_indicus_114713925.jpg"
+   },
+   {
+    "author": "AgainErick",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Tapirus_indicus_-_Maleise_tapir_-_Diergaarde_Blijdorp_-_Rotterdam_-_older_young_with_its_mother_-_fading_stripes_on_the_youngster.jpg"
+   }
+  ]
  },
  "proboscis": {
   "img": {
@@ -466,7 +718,21 @@ window.MEDIA={
    "type": "call, social call",
    "cut": "原始檔未修改"
   },
-  "xcsp": "Nasalis-larvatus"
+  "xcsp": "Nasalis-larvatus",
+  "more": [
+   {
+    "author": "Charles J. Sharp",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Proboscis_monkey_(Nasalis_larvatus)_male_head.jpg"
+   },
+   {
+    "author": "Charles J. Sharp",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Proboscis_monkey_(Nasalis_larvatus)_jumping.jpg"
+   }
+  ]
  },
  "dugong": {
   "img": {
@@ -485,6 +751,20 @@ window.MEDIA={
     "id": "Foy13sAljgY",
     "title": "儒艮X東帝汶 Dugong in Timor-Leste",
     "ch": "鯨嘆號 Cetacea & Nature"
+   }
+  ],
+  "more": [
+   {
+    "author": "Julien Willem",
+    "lic": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Dugong_Marsa_Alam.jpg"
+   },
+   {
+    "author": "Jerome Paillet (IFREMER, Laboratoire d'Océanographie Physiqu",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Dugong_(Dugong_dugon)_(Ifremer_00617-72913).jpg"
    }
   ]
  },
@@ -516,7 +796,21 @@ window.MEDIA={
    "type": "alarm call, call",
    "cut": "音量調整"
   },
-  "xcsp": "Paguma-larvata"
+  "xcsp": "Paguma-larvata",
+  "more": [
+   {
+    "author": "Rejoice Gassah",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Paguma_larvata_75496722.jpg"
+   },
+   {
+    "author": "Sunuwargr",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Masked_Palm_Civet_Resting_in_a_Kharsu_Oak_Tree,_Langtang_National_Park.jpg"
+   }
+  ]
  },
  "sambar": {
   "img": {
@@ -524,7 +818,7 @@ window.MEDIA={
    "lic": "CC BY-SA 4.0",
    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
    "page": "https://commons.wikimedia.org/wiki/File:Sambar_(Cervus_unicolor_unicolor)_male.jpg",
-   "note": "照片是印度的水鹿（同一種、不同亞種）；台灣水鹿毛色較深、體型較小。"
+   "note": "三張照片都是其他地區的水鹿（同一種、不同亞種）；台灣水鹿毛色較深、體型較小。"
   },
   "yt": [
    {
@@ -547,7 +841,21 @@ window.MEDIA={
    "type": "call",
    "cut": "音量調整"
   },
-  "xcsp": "Rusa-unicolor"
+  "xcsp": "Rusa-unicolor",
+  "more": [
+   {
+    "author": "Karunakanth",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:DEER_Sambar_(Rusa_unicolor).jpg"
+   },
+   {
+    "author": "Charles J. Sharp",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sambar_(Rusa_unicolor_unicolor)_female_head.jpg"
+   }
+  ]
  },
  "serow": {
   "img": {
@@ -577,7 +885,21 @@ window.MEDIA={
    "type": "alarm call, call",
    "cut": "音量調整"
   },
-  "xcsp": "Capricornis-swinhoei"
+  "xcsp": "Capricornis-swinhoei",
+  "more": [
+   {
+    "author": "longan Jiang",
+    "lic": "CC BY-SA 2.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ta%C3%AFwan_Serow.jpg"
+   },
+   {
+    "author": "Cheng-Tao Lin",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Capricornis_swinhoei_62912975.jpg"
+   }
+  ]
  },
  "marten": {
   "img": {
@@ -607,7 +929,21 @@ window.MEDIA={
    "type": "alarm call, call",
    "cut": "音量調整"
   },
-  "xcsp": "Martes-flavigula"
+  "xcsp": "Martes-flavigula",
+  "more": [
+   {
+    "author": "Shiv's fotografia",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Yellow-throated_Marten_the_fearless_shadow_of_the_forest_03.jpg"
+   },
+   {
+    "author": "Sasidharanmanekkara",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Yellow-throated_marten_(Martes_flavigula).jpg"
+   }
+  ]
  },
  "greenturtle": {
   "img": {
@@ -626,6 +962,20 @@ window.MEDIA={
     "id": "u-RxtAulBdI",
     "title": "澎湖小綠蠵龜孵化 民眾深夜自發性護送！",
     "ch": "快點TV"
+   }
+  ],
+  "more": [
+   {
+    "author": "Brocken Inaglory",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Total_internal_reflection_of_Chelonia_mydas.jpg"
+   },
+   {
+    "author": "E bailey",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Green_Sea_Turtle_-_Chelonia_mydas_-_Poipu_beach,_Kauai.jpg"
    }
   ]
  },
@@ -647,6 +997,20 @@ window.MEDIA={
     "title": "大赤鼯鼠飛行篇",
     "ch": "楊萬泰"
    }
+  ],
+  "more": [
+   {
+    "author": "張家瑜",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Petaurista_grandis_71584866.jpg"
+   },
+   {
+    "author": "Rohit Naniwadekar",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mammal_Red_Giant_Flying_Squirrel_Petaurista_IMG_7876_01.jpg"
+   }
   ]
  },
  "sunfish": {
@@ -666,6 +1030,20 @@ window.MEDIA={
     "id": "SE86jMggeu4",
     "title": "真「翻車」...曼波魚關渡碼頭「擱淺」吸人潮圍觀｜TVBS新聞 @TVBSNEWS01",
     "ch": "TVBS NEWS"
+   }
+  ],
+  "more": [
+   {
+    "author": "Nol Aders, modifications by PaladinWhite",
+    "lic": "CC BY-SA 3.0",
+    "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "page": "https://commons.wikimedia.org/wiki/File:MolaMola_Lisboa20051020_Modified.jpg"
+   },
+   {
+    "author": "Nol Aders",
+    "lic": "CC BY 2.5",
+    "licurl": "https://creativecommons.org/licenses/by/2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:Mola-mola-Lisboa-20051020.jpg"
    }
   ]
  },
@@ -687,6 +1065,20 @@ window.MEDIA={
     "title": "Secret Creatures: Africa's earth pig, the Aardvark. #wildlife",
     "ch": "Lion Mountain TV"
    }
+  ],
+  "more": [
+   {
+    "author": "Theo Kruse Burgers' Zoo",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Aardvark_(Orycteropus_afer).jpg"
+   },
+   {
+    "author": "(c) Nick Helme, some rights reserved (CC BY-SA)",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Southern_Aardvark_2.jpg"
+   }
   ]
  },
  "starmole": {
@@ -706,6 +1098,20 @@ window.MEDIA={
     "id": "GxgYxUVQHoQ",
     "title": "This star-nosed mole has SUPERPOWERS 👃 | Mammals - BBC",
     "ch": "BBC"
+   }
+  ],
+  "more": [
+   {
+    "author": "Dan MacNeal",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Condylura_cristata_(Ontario,_Canada)_1.jpg"
+   },
+   {
+    "author": "Marilyne Busque-Dubois",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Condylura_cristata_135791796.jpg"
    }
   ]
  },
@@ -737,7 +1143,21 @@ window.MEDIA={
    "type": "call",
    "cut": "音量調整"
   },
-  "xcsp": "Dasypus-novemcinctus"
+  "xcsp": "Dasypus-novemcinctus",
+  "more": [
+   {
+    "author": "Rhododendrites",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Nine-banded_armadillo_(13594).jpg"
+   },
+   {
+    "author": "gailhampshire from Cradley, Malvern, U.K",
+    "lic": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Nine-banded_Armadillo._Dasypus_novemcinctus._-_Flickr_-_gailhampshire.jpg"
+   }
+  ]
  },
  "loris": {
   "img": {
@@ -756,6 +1176,20 @@ window.MEDIA={
     "id": "Z0Xm3797Swk",
     "title": "小懶猴豐富化設施？是新生寶寶「麻荖」啦!",
     "ch": "臺北市立動物園"
+   }
+  ],
+  "more": [
+   {
+    "author": "The Kukang Rescue Program",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Nycticebus_coucang_night_monitoring.jpg"
+   },
+   {
+    "author": "David Haring / Duke Lemur Center",
+    "lic": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Nycticebus_coucang_001.jpg"
    }
   ]
  },
@@ -777,6 +1211,20 @@ window.MEDIA={
     "title": "【眼镜猴的世界①】The world of tarsiers",
     "ch": "Jeffrey Wang"
    }
+  ],
+  "more": [
+   {
+    "author": "Ray in Manila",
+    "lic": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Philippine_Tarsier_1.jpg"
+   },
+   {
+    "author": "John Martin PERRY",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Philippine_Tarsier_Bohol.jpg"
+   }
   ]
  },
  "fossa": {
@@ -796,6 +1244,20 @@ window.MEDIA={
     "id": "b86DU8w_2Ik",
     "title": "Madagascar's Deadliest Hunter | The Fossa",
     "ch": "Hidden Earth Wildlife "
+   }
+  ],
+  "more": [
+   {
+    "author": "Kai Squires",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Cryptoprocta_ferox_59024959.jpg"
+   },
+   {
+    "author": "Rob Foster",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Cryptoprocta_ferox_455479267.jpg"
    }
   ]
  },
@@ -822,7 +1284,21 @@ window.MEDIA={
    "id": "8QMAWpuzGdE",
    "title": "Maned Wolf Makes Some Noise - The Rare \"Roar-Bark\"",
    "ch": "kyrgyzburg"
-  }
+  },
+  "more": [
+   {
+    "author": "Ferrarezi Jr.",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chrysocyon_brachyurus_no_Parque_Nacional_da_Serra_da_Canastra_por_Celso_Ferrarezi_Jr_(07).jpg"
+   },
+   {
+    "author": "Rufus46",
+    "lic": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Maehnenwolf_Chrysocyon_brachyurus_Tierpark_Hellabrunn-3.jpg"
+   }
+  ]
  },
  "devil": {
   "img": {
@@ -852,7 +1328,21 @@ window.MEDIA={
    "type": "call",
    "cut": "原始檔未修改"
   },
-  "xcsp": "Sarcophilus-harrisii"
+  "xcsp": "Sarcophilus-harrisii",
+  "more": [
+   {
+    "author": "Wayne McLean (jgritz) Taken with Nikon D100.",
+    "lic": "CC BY-SA 2.5",
+    "licurl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:Tasdevil_large.jpg"
+   },
+   {
+    "author": "amdbergmann",
+    "lic": "CC BY-SA 2.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Tasmanian_devil_cropped.jpg"
+   }
+  ]
  },
  "kakapo": {
   "img": {
@@ -882,7 +1372,21 @@ window.MEDIA={
    "type": "alarm call",
    "cut": "音量調整"
   },
-  "xcsp": "Strigops-habroptila"
+  "xcsp": "Strigops-habroptila",
+  "more": [
+   {
+    "author": "Kimberley Collins",
+    "lic": "CC BY 2.0",
+    "licurl": "https://creativecommons.org/licenses/by/2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:K%C4%81k%C4%81p%C5%8D_at_Dunedin_Wildlife_Hospital.jpg"
+   },
+   {
+    "author": "Oscar Dove",
+    "lic": "CC BY 4.0",
+    "licurl": "https://creativecommons.org/licenses/by/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Strigops_habroptila_412477110.jpg"
+   }
+  ]
  },
  "babirusa": {
   "img": {
@@ -901,6 +1405,20 @@ window.MEDIA={
     "id": "8UTPKCr3-yE",
     "title": "既像鹿又像豬的「鹿豚」三胞胎！《國家地理》雜誌",
     "ch": "國家地理雜誌 National Geographic Magazine"
+   }
+  ],
+  "more": [
+   {
+    "author": "Alena Houšková",
+    "lic": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Babyrousa_celebensis_ZOO_D%C4%9B%C4%8D%C3%ADn.jpg"
+   },
+   {
+    "author": "LarsMueller",
+    "lic": "CC0",
+    "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "page": "https://commons.wikimedia.org/wiki/File:Berlin_zoologisk_hage_2026-04-07_img23.jpg"
    }
   ]
  },
@@ -922,6 +1440,20 @@ window.MEDIA={
     "title": "Close-up Of Male Saiga Antelope In Uzbekistan",
     "ch": "PTESwildlifevideos"
    }
+  ],
+  "more": [
+   {
+    "author": "Navinder Singh",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Saiga_tartarica.jpg"
+   },
+   {
+    "author": "Лариса Артемьева",
+    "lic": "CC0",
+    "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "page": "https://commons.wikimedia.org/wiki/File:Saiga_tatarica_tatarica_168634110.jpg"
+   }
   ]
  },
  "iguana": {
@@ -942,6 +1474,20 @@ window.MEDIA={
     "title": "Marine Iguana 海鬣蜥 - 1",
     "ch": "Jeffrey Liu"
    }
+  ],
+  "more": [
+   {
+    "author": "Diego Delso",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Iguana_marina_(Amblyrhynchus_cristatus),_Las_Bachas,_isla_Santa_Cruz,_islas_Gal%C3%A1pagos,_Ecuador,_2015-07-23,_DD_24.jpg"
+   },
+   {
+    "author": "Diego Delso",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Iguana_marina_(Amblyrhynchus_cristatus),_Bah%C3%ADa_Tortuga,_isla_Santa_Cruz,_islas_Gal%C3%A1pagos,_Ecuador,_2015-07-26,_DD_30.JPG"
+   }
   ]
  },
  "pygmyhippo": {
@@ -961,6 +1507,20 @@ window.MEDIA={
     "id": "V_QyuxYezRU",
     "title": "泰國侏儒河馬爆紅　「彈跳豬」成動物園人氣王｜華視新聞 20240917@CtsTw",
     "ch": "華視新聞 CH52"
+   }
+  ],
+  "more": [
+   {
+    "author": "Chuckupd",
+    "lic": "Public domain",
+    "licurl": "",
+    "page": "https://commons.wikimedia.org/wiki/File:Pygmy_hippopotamus_pair.jpg"
+   },
+   {
+    "author": "Raimond Spekking",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Zwergflusspferd_-_Pygmy_Hippopotamus_-_Hexaprotodon_liberiensis.jpg"
    }
   ]
  }
